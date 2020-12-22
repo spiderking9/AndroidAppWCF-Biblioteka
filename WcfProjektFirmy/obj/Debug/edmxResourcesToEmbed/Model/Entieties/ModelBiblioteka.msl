@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BibliotekaPlutaLukaszModelStoreContainer" CdmEntityContainer="BibliotekaPlutaLukaszEntities">
+    <EntitySetMapping Name="Autor">
+      <EntityTypeMapping TypeName="BibliotekaPlutaLukaszModel.Autor">
+        <MappingFragment StoreEntitySet="Autor">
+          <ScalarProperty Name="IdAutora" ColumnName="IdAutora" />
+          <ScalarProperty Name="Imie" ColumnName="Imie" />
+          <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Czytelnik">
+      <EntityTypeMapping TypeName="BibliotekaPlutaLukaszModel.Czytelnik">
+        <MappingFragment StoreEntitySet="Czytelnik">
+          <ScalarProperty Name="IdCzytelnika" ColumnName="IdCzytelnika" />
+          <ScalarProperty Name="Imie" ColumnName="Imie" />
+          <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Pesel" ColumnName="Pesel" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Egzemplarz">
+      <EntityTypeMapping TypeName="BibliotekaPlutaLukaszModel.Egzemplarz">
+        <MappingFragment StoreEntitySet="Egzemplarz">
+          <ScalarProperty Name="IdEgzemplarza" ColumnName="IdEgzemplarza" />
+          <ScalarProperty Name="IdKsiazki" ColumnName="IdKsiazki" />
+          <ScalarProperty Name="RokWydania" ColumnName="RokWydania" />
+          <ScalarProperty Name="IdCzytelnika" ColumnName="IdCzytelnika" />
+          <ScalarProperty Name="DataWypozyczenia" ColumnName="DataWypozyczenia" />
+          <ScalarProperty Name="DataOddania" ColumnName="DataOddania" />
+          <ScalarProperty Name="IdPracownika" ColumnName="IdPracownika" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FilieBiblioteki">
+      <EntityTypeMapping TypeName="BibliotekaPlutaLukaszModel.FilieBiblioteki">
+        <MappingFragment StoreEntitySet="FilieBiblioteki">
+          <ScalarProperty Name="IdFili" ColumnName="IdFili" />
+          <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gatunek">
+      <EntityTypeMapping TypeName="BibliotekaPlutaLukaszModel.Gatunek">
+        <MappingFragment StoreEntitySet="Gatunek">
+          <ScalarProperty Name="IdGatunku" ColumnName="IdGatunku" />
+          <ScalarProperty Name="NazwaGatunku" ColumnName="NazwaGatunku" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ksiazka">
+      <EntityTypeMapping TypeName="BibliotekaPlutaLukaszModel.Ksiazka">
+        <MappingFragment StoreEntitySet="Ksiazka">
+          <ScalarProperty Name="IdKsiazki" ColumnName="IdKsiazki" />
+          <ScalarProperty Name="Tytul" ColumnName="Tytul" />
+          <ScalarProperty Name="LiczbaEgzDostepnych" ColumnName="LiczbaEgzDostepnych" />
+          <ScalarProperty Name="IdGatunku" ColumnName="IdGatunku" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ksiazka_Autor">
+      <EntityTypeMapping TypeName="BibliotekaPlutaLukaszModel.Ksiazka_Autor">
+        <MappingFragment StoreEntitySet="Ksiazka_Autor">
+          <ScalarProperty Name="IdKsiazki" ColumnName="IdKsiazki" />
+          <ScalarProperty Name="IdAutora" ColumnName="IdAutora" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ksiegarnia">
+      <EntityTypeMapping TypeName="BibliotekaPlutaLukaszModel.Ksiegarnia">
+        <MappingFragment StoreEntitySet="Ksiegarnia">
+          <ScalarProperty Name="IdKsiegarni" ColumnName="IdKsiegarni" />
+          <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pracownicy">
+      <EntityTypeMapping TypeName="BibliotekaPlutaLukaszModel.Pracownicy">
+        <MappingFragment StoreEntitySet="Pracownicy">
+          <ScalarProperty Name="IdPracownika" ColumnName="IdPracownika" />
+          <ScalarProperty Name="Imie" ColumnName="Imie" />
+          <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+          <ScalarProperty Name="Pesel" ColumnName="Pesel" />
+          <ScalarProperty Name="IdFilii" ColumnName="IdFilii" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="BibliotekaPlutaLukaszModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zamowienia">
+      <EntityTypeMapping TypeName="BibliotekaPlutaLukaszModel.Zamowienia">
+        <MappingFragment StoreEntitySet="Zamowienia">
+          <ScalarProperty Name="IdZamowienia" ColumnName="IdZamowienia" />
+          <ScalarProperty Name="IdKsiazki" ColumnName="IdKsiazki" />
+          <ScalarProperty Name="IdPracownika" ColumnName="IdPracownika" />
+          <ScalarProperty Name="IdKsiegarni" ColumnName="IdKsiegarni" />
+          <ScalarProperty Name="RokWydania" ColumnName="RokWydania" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

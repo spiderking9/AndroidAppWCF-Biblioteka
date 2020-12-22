@@ -1,0 +1,30 @@
+﻿{
+  "ProviderId": "Microsoft.VisualStudio.ConnectedService.Wcf",
+  "Version": "15.0.40203.910",
+  "GettingStartedDocument": {
+    "Uri": "https://go.microsoft.com/fwlink/?linkid=858517"
+  },
+  "ExtendedData": {
+    "inputs": [
+      "http://192.168.1.101:55555/ServiceBiblioteka.svc"
+    ],
+    "collectionTypes": [
+      "System.Collections.Generic.Dictionary`2",
+      "System.Collections.Generic.List`1"
+    ],
+    "messageContract": true,
+    "namespaceMappings": [
+      "*, ServiceReferenceBiblioteka"
+    ],
+    "references": [
+      "System.Numerics.Vectors, {System.Numerics.Vectors, 4.5.0}",
+      "Xamarin.Essentials, {Xamarin.Essentials, 1.5.3.2}",
+      "Xamarin.Forms.Core, {Xamarin.Forms, 4.8.0.1451}",
+      "Xamarin.Forms.Platform, {Xamarin.Forms, 4.8.0.1451}",
+      "Xamarin.Forms.Xaml, {Xamarin.Forms, 4.8.0.1451}"
+    ],
+    "sync": true,
+    "targetFramework": "netstandard2.0",
+    "typeReuseMode": "All"
+  }
+}

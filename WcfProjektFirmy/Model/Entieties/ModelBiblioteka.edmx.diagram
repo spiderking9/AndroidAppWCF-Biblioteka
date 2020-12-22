@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c40361dbf9fa4daea841f315b1634bf7" Name="Diagram1">
+        <EntityTypeShape EntityType="BibliotekaPlutaLukaszModel.Autor" Width="1.5" PointX="6" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotekaPlutaLukaszModel.Czytelnik" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotekaPlutaLukaszModel.Egzemplarz" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotekaPlutaLukaszModel.FilieBiblioteki" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotekaPlutaLukaszModel.Gatunek" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotekaPlutaLukaszModel.Ksiazka" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotekaPlutaLukaszModel.Ksiazka_Autor" Width="1.5" PointX="8.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotekaPlutaLukaszModel.Ksiegarnia" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotekaPlutaLukaszModel.Pracownicy" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotekaPlutaLukaszModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BibliotekaPlutaLukaszModel.Zamowienia" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="BibliotekaPlutaLukaszModel.FK__Ksiazka_A__IdAut__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotekaPlutaLukaszModel.FK_Egzemplarz_Czytelnik" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotekaPlutaLukaszModel.FK_Egzemplarz_Ksiazka" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotekaPlutaLukaszModel.FK_Egzemplarz_Pracownicy" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotekaPlutaLukaszModel.FK_Pracownicy_FilieBiblioteki" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotekaPlutaLukaszModel.FK__Ksiazka__IdGatun__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotekaPlutaLukaszModel.FK__Ksiazka_A__IdKsi__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotekaPlutaLukaszModel.FK_Zamowienia_Ksiazka" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotekaPlutaLukaszModel.FK_Zamowienia_Ksiazka1" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotekaPlutaLukaszModel.FK_Zamowienia_Ksiegarnia" ManuallyRouted="false" />
+        <AssociationConnector Association="BibliotekaPlutaLukaszModel.FK_Zamowienia_Pracownicy" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
