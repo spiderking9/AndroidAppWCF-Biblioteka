@@ -130,7 +130,7 @@ namespace ServiceReferenceBiblioteka
         
         private string NazwiskoField;
         
-        private int PeselField;
+        private long PeselField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Adres
@@ -185,7 +185,7 @@ namespace ServiceReferenceBiblioteka
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Pesel
+        public long Pesel
         {
             get
             {
@@ -2058,6 +2058,18 @@ namespace ServiceReferenceBiblioteka
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/AddAutor", ReplyAction="http://tempuri.org/IServiceBiblioteka/AddAutorResponse")]
         System.Threading.Tasks.Task<ServiceReferenceBiblioteka.AddAutorResponse> AddAutorAsync(ServiceReferenceBiblioteka.AddAutorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/AddCzytelnik", ReplyAction="http://tempuri.org/IServiceBiblioteka/AddCzytelnikResponse")]
+        ServiceReferenceBiblioteka.AddCzytelnikResponse AddCzytelnik(ServiceReferenceBiblioteka.AddCzytelnikRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/AddCzytelnik", ReplyAction="http://tempuri.org/IServiceBiblioteka/AddCzytelnikResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.AddCzytelnikResponse> AddCzytelnikAsync(ServiceReferenceBiblioteka.AddCzytelnikRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/AddEgzemplarz", ReplyAction="http://tempuri.org/IServiceBiblioteka/AddEgzemplarzResponse")]
+        ServiceReferenceBiblioteka.AddEgzemplarzResponse AddEgzemplarz(ServiceReferenceBiblioteka.AddEgzemplarzRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/AddEgzemplarz", ReplyAction="http://tempuri.org/IServiceBiblioteka/AddEgzemplarzResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.AddEgzemplarzResponse> AddEgzemplarzAsync(ServiceReferenceBiblioteka.AddEgzemplarzRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2436,6 +2448,66 @@ namespace ServiceReferenceBiblioteka
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AddCzytelnik", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class AddCzytelnikRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public ServiceReferenceBiblioteka.Czytelnik czytelnik;
+        
+        public AddCzytelnikRequest()
+        {
+        }
+        
+        public AddCzytelnikRequest(ServiceReferenceBiblioteka.Czytelnik czytelnik)
+        {
+            this.czytelnik = czytelnik;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AddCzytelnikResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class AddCzytelnikResponse
+    {
+        
+        public AddCzytelnikResponse()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AddEgzemplarz", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class AddEgzemplarzRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public ServiceReferenceBiblioteka.Egzemplarz egzem;
+        
+        public AddEgzemplarzRequest()
+        {
+        }
+        
+        public AddEgzemplarzRequest(ServiceReferenceBiblioteka.Egzemplarz egzem)
+        {
+            this.egzem = egzem;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AddEgzemplarzResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class AddEgzemplarzResponse
+    {
+        
+        public AddEgzemplarzResponse()
+        {
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     public interface IServiceBibliotekaChannel : ServiceReferenceBiblioteka.IServiceBiblioteka, System.ServiceModel.IClientChannel
     {
@@ -2606,6 +2678,26 @@ namespace ServiceReferenceBiblioteka
             return base.Channel.AddAutorAsync(request);
         }
         
+        public ServiceReferenceBiblioteka.AddCzytelnikResponse AddCzytelnik(ServiceReferenceBiblioteka.AddCzytelnikRequest request)
+        {
+            return base.Channel.AddCzytelnik(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.AddCzytelnikResponse> AddCzytelnikAsync(ServiceReferenceBiblioteka.AddCzytelnikRequest request)
+        {
+            return base.Channel.AddCzytelnikAsync(request);
+        }
+        
+        public ServiceReferenceBiblioteka.AddEgzemplarzResponse AddEgzemplarz(ServiceReferenceBiblioteka.AddEgzemplarzRequest request)
+        {
+            return base.Channel.AddEgzemplarz(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.AddEgzemplarzResponse> AddEgzemplarzAsync(ServiceReferenceBiblioteka.AddEgzemplarzRequest request)
+        {
+            return base.Channel.AddEgzemplarzAsync(request);
+        }
+        
         public virtual System.Threading.Tasks.Task OpenAsync()
         {
             return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndOpen));
@@ -2634,7 +2726,7 @@ namespace ServiceReferenceBiblioteka
         {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IServiceBiblioteka))
             {
-                return new System.ServiceModel.EndpointAddress("http://192.168.1.101:55555/ServiceBiblioteka.svc");
+                return new System.ServiceModel.EndpointAddress("http://192.168.1.102:55555/ServiceBiblioteka.svc");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }

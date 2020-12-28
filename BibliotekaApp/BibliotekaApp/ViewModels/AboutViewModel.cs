@@ -9,8 +9,8 @@ namespace BibliotekaApp.ViewModels
     {
         public AboutViewModel()
         {
-            Title = "About";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
+            Title = "Start";
+            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://github.com/spiderking9"));
         }
 
         public ICommand OpenWebCommand { get; }

@@ -12,11 +12,6 @@ namespace BibliotekaApp.Services
 
         public AutorDataStore()
         {
-            //items = new List<Autorzy>()
-            //{
-            //    new Autorzy {  Imie = "First item", Nazwisko="This is an item description.",Opis="sdgdfgd" },
-            //    new Autorzy { Imie = "Second item", Nazwisko="This is an item description.",Opis="sdgdfgd" }
-            //};
             items = bibliotekaServices.GetAutor(null).GetAutorResult.Select(k => new Autorzy
             {
                 Imie = k.Imie,

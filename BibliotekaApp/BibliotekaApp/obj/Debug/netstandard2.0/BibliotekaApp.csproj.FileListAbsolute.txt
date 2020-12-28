@@ -7,10 +7,14 @@ C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\AppShell
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Lista\AutorPage.xaml.g.cs
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Lista\CzytelnikPage.xaml.g.cs
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Lista\EgzemplarzPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Lista\ItemsPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Nowy\NewItemPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Nowy\NowyAutorPage.xaml.g.cs
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Nowy\NowyCzytelnikPage.xaml.g.cs
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Nowy\NowyEgzemplarzPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\BibliotekaApp.AssemblyInfoInputs.cache
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\BibliotekaApp.AssemblyInfo.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\BibliotekaApp.csproj.CoreCompileInputs.cache
@@ -18,3 +22,4 @@ C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\XamlC.st
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\BibliotekaApp.dll
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\ref\BibliotekaApp.dll
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\BibliotekaApp.pdb
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\BibliotekaApp.csprojAssemblyReference.cache

@@ -8393,6 +8393,9 @@ namespace BibliotekaApp.Droid
 			// aapt resource value: 0x7F070072
 			public const int xamarin_logo = 2131165298;
 			
+			// aapt resource value: 0x7F070073
+			public const int xamarin_logo2 = 2131165299;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

@@ -40,6 +40,10 @@ namespace WcfProjektFirmy
         List<ZamowieniaForView> GetZamowienia();
         [OperationContract]
         void AddAutor(Autor autor);
+        [OperationContract]
+        void AddCzytelnik (Czytelnik czytelnik);
+        [OperationContract]
+        void AddEgzemplarz(Egzemplarz egzem);
 
         // TODO: Add your service operations here
     }

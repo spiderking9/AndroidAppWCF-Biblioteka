@@ -194,6 +194,19 @@ namespace WcfProjektFirmy
             db.Autor.Add(autor);
             db.SaveChanges();
         }
+        public void AddCzytelnik(Czytelnik czytelnik)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            db.Czytelnik.Add(czytelnik);
+            db.SaveChanges();
+        }
+
+        public void AddEgzemplarz(Egzemplarz egzem)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            db.Egzemplarz.Add(egzem);
+            db.SaveChanges();
+        }
     }
 
 }
