@@ -13,6 +13,9 @@ C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Li
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Lista\FiliePage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Lista\ItemsPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Lista\KsiazkaPage.xaml.g.cs
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Lista\KsiegarniaPage.xaml.g.cs
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Lista\PracownikPage.xaml.g.cs
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Lista\ZamownieniePage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Nowy\NewItemPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Nowy\NowyAutorPage.xaml.g.cs
@@ -20,6 +23,9 @@ C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\No
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Nowy\NowyEgzemplarzPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Nowy\NowyFiliePage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Nowy\NowyKsiazkaPage.xaml.g.cs
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Nowy\NowyKsiegarniaPage.xaml.g.cs
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Nowy\NowyPracownikPage.xaml.g.cs
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Nowy\NowyZamowieniePage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\BibliotekaApp.AssemblyInfoInputs.cache
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\BibliotekaApp.AssemblyInfo.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\BibliotekaApp.csproj.CoreCompileInputs.cache
