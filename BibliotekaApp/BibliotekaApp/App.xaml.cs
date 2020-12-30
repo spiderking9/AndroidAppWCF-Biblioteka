@@ -13,7 +13,6 @@ namespace BibliotekaApp
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             DependencyService.Register<AutorDataStore>();
             DependencyService.Register<EgzemplarzDataStore>();
             DependencyService.Register<CzytelnikDataStore>();

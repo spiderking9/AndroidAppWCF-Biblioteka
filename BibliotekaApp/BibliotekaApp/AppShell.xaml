@@ -82,7 +82,6 @@
     -->
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent Title="About" Icon="tab_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
-        <ShellContent Title="Browse" Icon="tab_feed.png" ContentTemplate="{DataTemplate local2:ItemsPage}" />
         <ShellContent Title="Autor" Icon="tab_feed.png" ContentTemplate="{DataTemplate local2:AutorPage}" />
         <ShellContent Title="Czytelnik" Icon="tab_feed.png" ContentTemplate="{DataTemplate local2:CzytelnikPage}" />
         <ShellContent Title="Egzemplarz" Icon="tab_feed.png" ContentTemplate="{DataTemplate local2:EgzemplarzPage}" />
