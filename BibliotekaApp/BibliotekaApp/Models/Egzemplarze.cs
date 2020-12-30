@@ -10,8 +10,8 @@ namespace BibliotekaApp.Models
         public string KsiazkaTytul { get; set; }
         public int RokWydania { get; set; }
         public string CzytelnikNazwisko { get; set; }
-        public DateTime? DataWypozyczenia { get; set; }
-        public DateTime? DataOddania { get; set; }
+        public string DataWypozyczenia { get; set; }
+        public String DataOddania { get; set; }
         public string PracownikNazwisko { get; set; }
     }
 }

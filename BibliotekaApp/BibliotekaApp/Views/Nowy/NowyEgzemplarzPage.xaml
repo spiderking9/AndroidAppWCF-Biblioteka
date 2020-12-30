@@ -6,17 +6,17 @@
              Title="Nowy Egzemplarz">
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
-            <Label Text="Nazwa" FontSize="Medium" />
+            <Label Text="IdKsiazki" FontSize="Medium" />
             <Entry Text="{Binding IdKsiazki, Mode=TwoWay}" FontSize="Medium" />
-            <Label Text="Adres" FontSize="Medium" />
+            <Label Text="RokWydania" FontSize="Medium" />
             <Editor Text="{Binding RokWydania, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
-            <Label Text="Telefon" FontSize="Medium" />
+            <Label Text="IdCzytelnika" FontSize="Medium" />
             <Entry Text="{Binding IdCzytelnika, Mode=TwoWay}" FontSize="Medium" />
-            <Label Text="Nazwa" FontSize="Medium" />
+            <Label Text="DataWypozyczenia" FontSize="Medium" />
             <Entry Text="{Binding DataWypozyczenia, Mode=TwoWay}" FontSize="Medium" />
-            <Label Text="Adres" FontSize="Medium" />
+            <Label Text="DataOddania" FontSize="Medium" />
             <Editor Text="{Binding DataOddania, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
-            <Label Text="Telefon" FontSize="Medium" />
+            <Label Text="IdPracownika" FontSize="Medium" />
             <Entry Text="{Binding IdPracownika, Mode=TwoWay}" FontSize="Medium" />
             <StackLayout Orientation="Horizontal">
                 <Button Text="Anuluj" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>

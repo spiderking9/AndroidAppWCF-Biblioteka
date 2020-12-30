@@ -44,6 +44,16 @@ namespace WcfProjektFirmy
         void AddCzytelnik (Czytelnik czytelnik);
         [OperationContract]
         void AddEgzemplarz(Egzemplarz egzem);
+        [OperationContract]
+        void AddFilia(FilieBiblioteki filie);
+        [OperationContract]
+        void AddKsiazka(Ksiazka ksiazka);
+        [OperationContract]
+        void AddKsiegarnia(Ksiegarnia ksieg);
+        [OperationContract]
+        void AddPracownicy(Pracownicy prac);
+        [OperationContract]
+        void AddZamowienia(Zamowienia zamow);
 
         // TODO: Add your service operations here
     }

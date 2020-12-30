@@ -18,7 +18,8 @@ namespace BibliotekaApp
             Routing.RegisterRoute(nameof(NowyAutorPage), typeof(NowyAutorPage));
             Routing.RegisterRoute(nameof(NowyCzytelnikPage), typeof(NowyCzytelnikPage));
             Routing.RegisterRoute(nameof(NowyEgzemplarzPage), typeof(NowyEgzemplarzPage));
-
+            Routing.RegisterRoute(nameof(NowyKsiazkaPage), typeof(NowyKsiazkaPage));
+            Routing.RegisterRoute(nameof(NowyFiliePage), typeof(NowyFiliePage));
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)

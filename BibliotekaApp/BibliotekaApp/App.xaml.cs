@@ -17,6 +17,8 @@ namespace BibliotekaApp
             DependencyService.Register<AutorDataStore>();
             DependencyService.Register<EgzemplarzDataStore>();
             DependencyService.Register<CzytelnikDataStore>();
+            DependencyService.Register<FilieDataStore>();
+            DependencyService.Register<KsiazkaDataStore>();
             DependencyService.Register<ServiceReferenceBiblioteka.ServiceBibliotekaClient>();
             MainPage = new AppShell();
         }

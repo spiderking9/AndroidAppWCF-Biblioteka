@@ -80,11 +80,11 @@ namespace WcfProjektFirmy
                     KsiazkaTytul=egz.Ksiazka.Tytul,
                     RokWydania=egz.RokWydania,
                     IdCzytelnika=egz.IdCzytelnika,
-                    CzytelnikNazwisko=egz.Czytelnik.Imie+" "+ egz.Czytelnik.Nazwisko,
+                    CzytelnikNazwisko=egz.Czytelnik.Imie.Trim()+" "+ egz.Czytelnik.Nazwisko,
                     DataWypozyczenia=egz.DataWypozyczenia,
                     DataOddania=egz.DataOddania,
                     IdPracownika=egz.IdPracownika,
-                    PracownikNazwisko=egz.Pracownicy.Imie+" "+egz.Pracownicy.Nazwisko
+                    PracownikNazwisko=egz.Pracownicy.Imie.Trim() + " "+egz.Pracownicy.Nazwisko
                 }
             ).ToList();
         }
@@ -205,6 +205,41 @@ namespace WcfProjektFirmy
         {
             BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
             db.Egzemplarz.Add(egzem);
+            db.SaveChanges();
+        }
+
+        public void AddFilia(FilieBiblioteki filie)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            db.FilieBiblioteki.Add(filie);
+            db.SaveChanges();
+        }
+
+        public void AddKsiazka(Ksiazka ksiazka)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            db.Ksiazka.Add(ksiazka);
+            db.SaveChanges();
+        }
+
+        public void AddKsiegarnia(Ksiegarnia ksieg)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            db.Ksiegarnia.Add(ksieg);
+            db.SaveChanges();
+        }
+
+        public void AddPracownicy(Pracownicy prac)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            db.Pracownicy.Add(prac);
+            db.SaveChanges();
+        }
+
+        public void AddZamowienia(Zamowienia zamow)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            db.Zamowienia.Add(zamow);
             db.SaveChanges();
         }
     }

@@ -86,6 +86,8 @@
         <ShellContent Title="Autor" Icon="tab_feed.png" ContentTemplate="{DataTemplate local2:AutorPage}" />
         <ShellContent Title="Czytelnik" Icon="tab_feed.png" ContentTemplate="{DataTemplate local2:CzytelnikPage}" />
         <ShellContent Title="Egzemplarz" Icon="tab_feed.png" ContentTemplate="{DataTemplate local2:EgzemplarzPage}" />
+        <ShellContent Title="Filie" Icon="tab_feed.png" ContentTemplate="{DataTemplate local2:FiliePage}" />
+        <ShellContent Title="Ksiazki" Icon="tab_feed.png" ContentTemplate="{DataTemplate local2:KsiazkaPage}" />
     </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->

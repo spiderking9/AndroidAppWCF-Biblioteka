@@ -28,8 +28,8 @@ namespace BibliotekaApp.Services
                 CzytelnikNazwisko =k.CzytelnikNazwisko,
                 RokWydania = k.RokWydania,
                 KsiazkaTytul = k.KsiazkaTytul,
-                DataWypozyczenia = k.DataWypozyczenia,
-                DataOddania = k.DataOddania,
+                DataWypozyczenia = k.DataWypozyczenia?.ToString("dd/MM/yyyy")?? "brak danych",
+                DataOddania = k.DataOddania?.ToString("dd/MM/yyyy") ?? "brak danych",
                 PracownikNazwisko = k.PracownikNazwisko
             }).ToList();
         }
