@@ -6,7 +6,7 @@
   },
   "ExtendedData": {
     "inputs": [
-      "http://192.168.1.101:55555/ServiceBiblioteka.svc"
+      "http://192.168.1.100:55555/ServiceBiblioteka.svc"
     ],
     "collectionTypes": [
       "System.Collections.Generic.Dictionary`2",

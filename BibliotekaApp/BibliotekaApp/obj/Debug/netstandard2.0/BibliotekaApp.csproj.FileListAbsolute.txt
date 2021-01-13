@@ -9,6 +9,7 @@ C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Li
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Lista\CzytelnikPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Lista\EgzemplarzPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Lista\FiliePage.xaml.g.cs
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Lista\GatunekPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Lista\KsiazkaPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Lista\KsiegarniaPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Lista\PracownikPage.xaml.g.cs
@@ -18,6 +19,7 @@ C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\No
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Nowy\NowyCzytelnikPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Nowy\NowyEgzemplarzPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Nowy\NowyFiliePage.xaml.g.cs
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Nowy\NowyGatunekPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Nowy\NowyKsiazkaPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Nowy\NowyKsiegarniaPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Nowy\NowyPracownikPage.xaml.g.cs

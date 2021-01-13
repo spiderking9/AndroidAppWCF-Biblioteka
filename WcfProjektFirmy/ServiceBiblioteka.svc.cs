@@ -242,6 +242,13 @@ namespace WcfProjektFirmy
             db.Zamowienia.Add(zamow);
             db.SaveChanges();
         }
+
+        public void AddGatunki(Gatunek gatunek)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            db.Gatunek.Add(gatunek);
+            db.SaveChanges();
+        }
     }
 
 }

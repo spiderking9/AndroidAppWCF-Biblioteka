@@ -14,6 +14,7 @@ namespace BibliotekaApp.Services
         {
             items = bibliotekaServices.GetFilie(null).GetFilieResult.Select(k => new Filie
             {
+                IdFili=k.IdFili,
                 Nazwa = k.Nazwa,
                 Adres = k.Adres
             }).ToList();

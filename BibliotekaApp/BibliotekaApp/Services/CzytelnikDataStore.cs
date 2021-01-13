@@ -20,6 +20,7 @@ namespace BibliotekaApp.Services
 
             items = bibliotekaServices.GetCzytelnik(null).GetCzytelnikResult.Select(k => new Czytelnicy
             {
+                IdCzytelnika=k.IdCzytelnika,
                 Imie = k.Imie,
                 Nazwisko = k.Nazwisko,
                 Adres = k.Adres,

@@ -54,6 +54,8 @@ namespace WcfProjektFirmy
         void AddPracownicy(Pracownicy prac);
         [OperationContract]
         void AddZamowienia(Zamowienia zamow);
+        [OperationContract]
+        void AddGatunki(Gatunek gatunek);
 
         // TODO: Add your service operations here
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using BibliotekaApp.Models;
+using BibliotekaApp.Services;
 
 namespace BibliotekaApp.ViewModels.Nowy
 {
@@ -9,14 +10,28 @@ namespace BibliotekaApp.ViewModels.Nowy
     {
         private string _Tytul;
         private int _LiczbaEgzDostepnych;
-        private int _IdGatunku;
+        private Gatunki _SelectedGatunki;
+
+        public List<Gatunki> Gatunki
+        {
+            get
+            {
+                return new GatunekDataStore().items;
+            }
+        }
         public NowyKsiazkaViewModel()
             : base()
         {
+            SelectedGatunki = new Gatunki();
         }
         public override bool ValidateSave()
         {
-            return !String.IsNullOrWhiteSpace(_Tytul);
+            return !String.IsNullOrWhiteSpace(SelectedGatunki.NazwaGatunku);
+        }
+        public Gatunki SelectedGatunki
+        {
+            get => _SelectedGatunki;
+            set => SetProperty(ref _SelectedGatunki, value);
         }
         public string Tytul
         {
@@ -28,18 +43,14 @@ namespace BibliotekaApp.ViewModels.Nowy
             get => _LiczbaEgzDostepnych;
             set => SetProperty(ref _LiczbaEgzDostepnych, value);
         }
-        public int IdGatunku
-        {
-            get => _IdGatunku;
-            set => SetProperty(ref _IdGatunku, value);
-        }
+
         public override Ksiazki SetItem()
         {
             Ksiazki newItem = new Ksiazki()
             {
                 Tytul = Tytul,
                 LiczbaEgzDostepnych = LiczbaEgzDostepnych.ToString(),
-                IdGatunku = IdGatunku
+                IdGatunku = SelectedGatunki.IdGatunku
             };
             return newItem;
         }

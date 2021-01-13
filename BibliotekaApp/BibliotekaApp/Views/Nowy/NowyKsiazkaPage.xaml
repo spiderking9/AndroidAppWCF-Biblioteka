@@ -10,8 +10,10 @@
             <Entry Text="{Binding Tytul, Mode=TwoWay}" FontSize="Medium" />
             <Label Text="LiczbaEgzDostepnych" FontSize="Medium" />
             <Editor Text="{Binding LiczbaEgzDostepnych, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
-            <Label Text="IdGatunku" FontSize="Medium" />
-            <Entry Text="{Binding IdGatunku, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="Klient" FontSize="Medium" />
+            <Picker Title="Wybierz Gatunek" ItemsSource="{Binding Gatunki}" ItemDisplayBinding="{Binding NazwaGatunku}" 
+                    SelectedItem="{Binding SelectedGatunki}" FontSize="Medium" Margin="0" />
+            
             <StackLayout Orientation="Horizontal">
                 <Button Text="Anuluj" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
                 <Button Text="Zapisz" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>

@@ -6,18 +6,21 @@
              Title="Nowy Egzemplarz">
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
-            <Label Text="IdKsiazki" FontSize="Medium" />
-            <Entry Text="{Binding IdKsiazki, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="Ksiazka" FontSize="Medium" />
+            <!--<Entry Text="{Binding IdKsiazki, Mode=TwoWay}" FontSize="Medium" />-->
+            <Picker Title="Wybierz Ksiazke" ItemsSource="{Binding Ksiazki}" ItemDisplayBinding="{Binding Tytul}" SelectedItem="{Binding SelectedKsiazka}" FontSize="Medium" Margin="0" />
             <Label Text="RokWydania" FontSize="Medium" />
             <Editor Text="{Binding RokWydania, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
-            <Label Text="IdCzytelnika" FontSize="Medium" />
-            <Entry Text="{Binding IdCzytelnika, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="Czytelnik" FontSize="Medium" />
+            <!--<Entry Text="{Binding IdCzytelnika, Mode=TwoWay}" FontSize="Medium" />-->
+            <Picker Title="Wybierz Czytelnika" ItemsSource="{Binding Czytelnik}" ItemDisplayBinding="{Binding Nazwisko}" SelectedItem="{Binding SelectedCzytelnik}" FontSize="Medium" Margin="0" />
             <Label Text="DataWypozyczenia" FontSize="Medium" />
             <Entry Text="{Binding DataWypozyczenia, Mode=TwoWay}" FontSize="Medium" />
             <Label Text="DataOddania" FontSize="Medium" />
             <Editor Text="{Binding DataOddania, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
-            <Label Text="IdPracownika" FontSize="Medium" />
-            <Entry Text="{Binding IdPracownika, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="Pracownik" FontSize="Medium" />
+            <!--<Entry Text="{Binding IdPracownika, Mode=TwoWay}" FontSize="Medium" />-->
+            <Picker Title="Wybierz Pracownika" ItemsSource="{Binding Pracownik}" ItemDisplayBinding="{Binding Nazwisko}" SelectedItem="{Binding SelectedPracownik}" FontSize="Medium" Margin="0" />
             <StackLayout Orientation="Horizontal">
                 <Button Text="Anuluj" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
                 <Button Text="Zapisz" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>

@@ -9,20 +9,8 @@ namespace BibliotekaApp.Services
 {
     public class EgzemplarzDataStore : ItemDataStore<Egzemplarze>
     {
-
         public EgzemplarzDataStore()
         {
-            //items = new List<Egzemplarze>()
-            //{
-            //    new Egzemplarze {  
-            //        IdKsiazki = 23, 
-            //        RokWydania=23,
-            //        IdCzytelnika=1,
-            //        DataWypozyczenia=DateTime.Now,
-            //        DataOddania=DateTime.Now,
-            //        IdPracownika=23
-            //    }
-            //};
             items = bibliotekaServices.GetEgzemplarz(null).GetEgzemplarzResult.Select(k => new Egzemplarze
             {
                 CzytelnikNazwisko =k.CzytelnikNazwisko,
@@ -36,18 +24,18 @@ namespace BibliotekaApp.Services
 
         public override void AddItem(Egzemplarze item)
         {
-            throw new NotImplementedException();
-            //bibliotekaServices.AddEgzemplarz(new AddEgzemplarzRequest(
-            //    new Egzemplarz
-            //    {
-            //        IdKsiazki = item.IdKsiazki,
-            //        RokWydania = item.RokWydania,
-            //        IdCzytelnika = item.IdCzytelnika,
-            //        DataWypozyczenia = item.DataWypozyczenia,
-            //        DataOddania = item.DataOddania,
-            //        IdPracownika = item.IdPracownika,
-            //        IsActive = true
-            //    }));
+            //throw new NotImplementedException();
+            bibliotekaServices.AddEgzemplarz(new AddEgzemplarzRequest(
+                new Egzemplarz
+                {
+                    IdKsiazki = item.IdKsiazki,
+                    RokWydania = item.RokWydania,
+                    IdCzytelnika = item.IdCzytelnika,
+                    DataWypozyczenia = item.Data_Wypozyczenia,
+                    DataOddania = item.Data_Oddania,
+                    IdPracownika = item.IdPracownika,
+                    IsActive = true
+                }));
         }
 
         public override Egzemplarze Find(Egzemplarze item)

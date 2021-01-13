@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BibliotekaApp.Views.Lista.GatunekPage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:BibliotekaApp.ViewModels.Lista"  
+             xmlns:model="clr-namespace:BibliotekaApp.Models" >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Dodaj" Command="{Binding AddItemCommand}" />
+    </ContentPage.ToolbarItems>
+    <!--<DataGrid Grid.Row="3" ItemsSource="{Binding List}" AutoGenerateColumns="False" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <DataGrid.Columns>
+            <DataGridTextColumn Header="Lp" Binding="{Binding WUR_WurID}"/>
+            <DataGridTextColumn Header="Pracownik Id" Binding="{Binding WUR_DataOd}"/>
+            <DataGridTextColumn Header="Dzien" Binding="{Binding WUR_DataDo}"/>
+            <DataGridTextColumn Header="Zmiana" Binding="{Binding NazwaPracownika}"/>
+            <DataGridTextColumn Header="Zmiana" Binding="{Binding RodzajUrlopu}"/>
+        </DataGrid.Columns>
+    </DataGrid>-->
+    <RefreshView x:DataType="local:GatunekViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <CollectionView x:Name="ItemsListView"
+                ItemsSource="{Binding Items}"
+                SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10" x:DataType="model:Gatunki">
+                        <Label Text="{Binding NazwaGatunku}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" />
+                        <Label Text="{Binding Opis}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:GatunekViewModel}}, Path=ItemTapped}"		
+                                CommandParameter="{Binding .}">
+                            </TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView>
+</ContentPage>

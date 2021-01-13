@@ -2100,6 +2100,12 @@ namespace ServiceReferenceBiblioteka
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/AddZamowienia", ReplyAction="http://tempuri.org/IServiceBiblioteka/AddZamowieniaResponse")]
         System.Threading.Tasks.Task<ServiceReferenceBiblioteka.AddZamowieniaResponse> AddZamowieniaAsync(ServiceReferenceBiblioteka.AddZamowieniaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/AddGatunki", ReplyAction="http://tempuri.org/IServiceBiblioteka/AddGatunkiResponse")]
+        ServiceReferenceBiblioteka.AddGatunkiResponse AddGatunki(ServiceReferenceBiblioteka.AddGatunkiRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/AddGatunki", ReplyAction="http://tempuri.org/IServiceBiblioteka/AddGatunkiResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.AddGatunkiResponse> AddGatunkiAsync(ServiceReferenceBiblioteka.AddGatunkiRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2688,6 +2694,36 @@ namespace ServiceReferenceBiblioteka
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AddGatunki", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class AddGatunkiRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public ServiceReferenceBiblioteka.Gatunek gatunek;
+        
+        public AddGatunkiRequest()
+        {
+        }
+        
+        public AddGatunkiRequest(ServiceReferenceBiblioteka.Gatunek gatunek)
+        {
+            this.gatunek = gatunek;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="AddGatunkiResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class AddGatunkiResponse
+    {
+        
+        public AddGatunkiResponse()
+        {
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     public interface IServiceBibliotekaChannel : ServiceReferenceBiblioteka.IServiceBiblioteka, System.ServiceModel.IClientChannel
     {
@@ -2926,6 +2962,16 @@ namespace ServiceReferenceBiblioteka
         public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.AddZamowieniaResponse> AddZamowieniaAsync(ServiceReferenceBiblioteka.AddZamowieniaRequest request)
         {
             return base.Channel.AddZamowieniaAsync(request);
+        }
+        
+        public ServiceReferenceBiblioteka.AddGatunkiResponse AddGatunki(ServiceReferenceBiblioteka.AddGatunkiRequest request)
+        {
+            return base.Channel.AddGatunki(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.AddGatunkiResponse> AddGatunkiAsync(ServiceReferenceBiblioteka.AddGatunkiRequest request)
+        {
+            return base.Channel.AddGatunkiAsync(request);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

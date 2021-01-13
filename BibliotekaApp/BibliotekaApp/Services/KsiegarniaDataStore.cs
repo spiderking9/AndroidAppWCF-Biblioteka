@@ -14,6 +14,7 @@ namespace BibliotekaApp.Services
         {
             items = bibliotekaServices.GetKsiegarnia(null).GetKsiegarniaResult.Select(k => new Ksiegarnie
             {
+                IdKsiegarni=k.IdKsiegarni,
                 Nazwa = k.Nazwa,
                 Adres = k.Adres
             }).ToList();

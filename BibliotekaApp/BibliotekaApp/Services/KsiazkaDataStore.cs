@@ -14,6 +14,7 @@ namespace BibliotekaApp.Services
         {
             items = bibliotekaServices.GetKsiazka(null).GetKsiazkaResult.Select(k => new Ksiazki
             {
+                IdKsiazki=k.IdKsiazki,
                 Tytul = k.Tytul,
                 LiczbaEgzDostepnych = k.LiczbaEgzDostepnych<1?"brak dostepnych egzeplarzy": k.LiczbaEgzDostepnych?.ToString(),
                 IdGatunku = k.IdGatunku

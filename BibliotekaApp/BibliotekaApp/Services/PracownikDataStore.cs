@@ -14,6 +14,7 @@ namespace BibliotekaApp.Services
         {
             items = bibliotekaServices.GetPracownicy(null).GetPracownicyResult.Select(k => new Pracownicyy
             {
+                IdPracownika=k.IdPracownika,
                 Imie = k.Imie,
                 Nazwisko = k.Nazwisko,
                 Pesel = k.Pesel,
