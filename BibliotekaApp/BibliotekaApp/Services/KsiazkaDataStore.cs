@@ -17,8 +17,9 @@ namespace BibliotekaApp.Services
                 IdKsiazki=k.IdKsiazki,
                 Tytul = k.Tytul,
                 LiczbaEgzDostepnych = k.LiczbaEgzDostepnych<1?"brak dostepnych egzeplarzy": k.LiczbaEgzDostepnych?.ToString(),
-                IdGatunku = k.IdGatunku
-            }).ToList();
+                IdGatunku = k.IdGatunku,
+                Autorzy=k.Autorzy
+        }).ToList();
         }
 
         public override void AddItem(Ksiazki item)

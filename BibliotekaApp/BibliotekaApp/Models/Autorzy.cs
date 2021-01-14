@@ -10,6 +10,7 @@ namespace BibliotekaApp.Models
         public string Imie { get; set; }
         public string Nazwisko { get; set; }
         public string Opis { get; set; }
+        public string Ksiazki { get; set; }
 
     }
 }

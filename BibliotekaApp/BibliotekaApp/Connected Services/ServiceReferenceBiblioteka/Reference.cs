@@ -59,6 +59,8 @@ namespace ServiceReferenceBiblioteka
         
         private string ImieField;
         
+        private string KsiazkiField;
+        
         private string NazwiskoField;
         
         private string OpisField;
@@ -86,6 +88,19 @@ namespace ServiceReferenceBiblioteka
             set
             {
                 this.ImieField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ksiazki
+        {
+            get
+            {
+                return this.KsiazkiField;
+            }
+            set
+            {
+                this.KsiazkiField = value;
             }
         }
         
@@ -465,6 +480,8 @@ namespace ServiceReferenceBiblioteka
     public partial class KsiazkaForView : object
     {
         
+        private string AutorzyField;
+        
         private string GatunekNazwaField;
         
         private int IdGatunkuField;
@@ -474,6 +491,19 @@ namespace ServiceReferenceBiblioteka
         private System.Nullable<int> LiczbaEgzDostepnychField;
         
         private string TytulField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Autorzy
+        {
+            get
+            {
+                return this.AutorzyField;
+            }
+            set
+            {
+                this.AutorzyField = value;
+            }
+        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string GatunekNazwa
@@ -3002,7 +3032,7 @@ namespace ServiceReferenceBiblioteka
         {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IServiceBiblioteka))
             {
-                return new System.ServiceModel.EndpointAddress("http://192.168.1.101:55555/ServiceBiblioteka.svc");
+                return new System.ServiceModel.EndpointAddress("http://192.168.1.100:55555/ServiceBiblioteka.svc");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }

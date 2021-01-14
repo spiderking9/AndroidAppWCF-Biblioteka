@@ -10,5 +10,7 @@ namespace BibliotekaApp.Models
         public string Tytul { get; set; }
         public string LiczbaEgzDostepnych { get; set; }
         public int IdGatunku { get; set; }
+        public string NazwaGatunku { get; set; }
+        public string Autorzy { get; set; }
     }
 }

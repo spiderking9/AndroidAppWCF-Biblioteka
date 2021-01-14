@@ -16,7 +16,8 @@ namespace BibliotekaApp.Services
             {
                 Imie = k.Imie,
                 Nazwisko = k.Nazwisko,
-                Opis = k.Opis
+                Opis = k.Opis,
+                Ksiazki=k.Ksiazki
             }).ToList();
         }
 
