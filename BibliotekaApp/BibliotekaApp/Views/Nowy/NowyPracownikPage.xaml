@@ -12,8 +12,9 @@
             <Editor Text="{Binding Nazwisko, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
             <Label Text="Pesel" FontSize="Medium" />
             <Entry Text="{Binding Pesel, Mode=TwoWay}" FontSize="Medium" />
-            <Label Text="IdFilii" FontSize="Medium" />
-            <Entry Text="{Binding IdFilii, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="Filia" FontSize="Medium" />
+            <Picker Title="Wybierz Filie" ItemsSource="{Binding Filie}" ItemDisplayBinding="{Binding Nazwa}" 
+                    SelectedItem="{Binding SelectedFilie}" FontSize="Medium" Margin="0" />
             <StackLayout Orientation="Horizontal">
                 <Button Text="Anuluj" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
                 <Button Text="Zapisz" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>

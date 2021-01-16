@@ -15,9 +15,9 @@ namespace BibliotekaApp.Services
             items = bibliotekaServices.GetZamowienia(null).GetZamowieniaResult.Select(k => new Zamowieniaa
             {
                 IdZamowienia=k.IdZamowienia,
-                IdKsiazki = k.IdKsiazki,
-                IdPracownika = k.IdPracownika,
-                IdKsiegarni = k.IdKsiegarni,
+                KsiazkaTytul=k.KsiazkaTytul,
+                PracownikNazwisko=k.PracownikNazwisko,
+                KsiegarniaNazwa = k.KsiegarniaNazwa,
                 RokWydania = k.RokWydania
             }).ToList();
         }

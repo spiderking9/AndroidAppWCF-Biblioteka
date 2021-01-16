@@ -11,6 +11,18 @@ namespace BibliotekaApp.ViewModels.Nowy
         private string _Tytul;
         private int _LiczbaEgzDostepnych;
         private Gatunki _SelectedGatunki;
+        List<string> nazwy;
+
+
+        public List<string> checkboxlist
+        {
+
+            get
+            {
+                return nazwy;
+            }
+        }
+
 
         public List<Gatunki> Gatunki
         {
@@ -22,6 +34,7 @@ namespace BibliotekaApp.ViewModels.Nowy
         public NowyKsiazkaViewModel()
             : base()
         {
+            nazwy = new List<string>() { "A", "B", "C" };
             SelectedGatunki = new Gatunki();
         }
         public override bool ValidateSave()

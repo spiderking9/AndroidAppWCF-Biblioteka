@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "Com.Airbnb.Xamarin.Forms.Lottie/4.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.5.0.657"
+        },
+        "compile": {
+          "lib/netstandard2.0/Lottie.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Lottie.Forms.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/2.0.0": {
         "type": "package",
         "compile": {
@@ -24,6 +36,18 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Rg.Plugins.Popup/2.0.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.5.0.657"
+        },
+        "compile": {
+          "lib/netstandard2.0/Rg.Plugins.Popup.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Rg.Plugins.Popup.dll": {}
         }
       },
       "System.Buffers/4.4.0": {
@@ -202,10 +226,64 @@
           "buildTransitive/Xamarin.Forms.props": {},
           "buildTransitive/Xamarin.Forms.targets": {}
         }
+      },
+      "XF.Material/1.7.7": {
+        "type": "package",
+        "dependencies": {
+          "Com.Airbnb.Xamarin.Forms.Lottie": "4.0.8",
+          "Rg.Plugins.Popup": "2.0.0.8",
+          "Xamarin.Essentials": "1.5.3.2",
+          "Xamarin.Forms": "4.5.0.657"
+        },
+        "compile": {
+          "lib/netstandard2.0/XF.Material.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/XF.Material.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Com.Airbnb.Xamarin.Forms.Lottie/4.0.8": {
+      "sha512": "8wA4CS9SqkRJj94UfsTGDZK6wv1Sw/WnbscDUx2k3nzv0jFI0TeoyNlJFzLo3RXBGG5mqASzwAEdTlEbvZ+cpA==",
+      "type": "package",
+      "path": "com.airbnb.xamarin.forms.lottie/4.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "com.airbnb.xamarin.forms.lottie.4.0.8.nupkg.sha512",
+        "com.airbnb.xamarin.forms.lottie.nuspec",
+        "icon.png",
+        "lib/monoandroid10.0/Lottie.Forms.dll",
+        "lib/monoandroid10.0/Lottie.Forms.pdb",
+        "lib/monoandroid10.0/Lottie.Forms.xml",
+        "lib/net472/Lottie.Forms.dll",
+        "lib/net472/Lottie.Forms.pdb",
+        "lib/net472/Lottie.Forms.xml",
+        "lib/netcoreapp3.1/Lottie.Forms.dll",
+        "lib/netcoreapp3.1/Lottie.Forms.pdb",
+        "lib/netcoreapp3.1/Lottie.Forms.xml",
+        "lib/netstandard2.0/Lottie.Forms.dll",
+        "lib/netstandard2.0/Lottie.Forms.pdb",
+        "lib/netstandard2.0/Lottie.Forms.xml",
+        "lib/tizen40/Lottie.Forms.dll",
+        "lib/tizen40/Lottie.Forms.pdb",
+        "lib/tizen40/Lottie.Forms.xml",
+        "lib/uap10.0.17763/Lottie.Forms.dll",
+        "lib/uap10.0.17763/Lottie.Forms.pdb",
+        "lib/uap10.0.17763/Lottie.Forms.pri",
+        "lib/uap10.0.17763/Lottie.Forms.xml",
+        "lib/xamarinios10/Lottie.Forms.dll",
+        "lib/xamarinios10/Lottie.Forms.pdb",
+        "lib/xamarinios10/Lottie.Forms.xml",
+        "lib/xamarinmac20/Lottie.Forms.dll",
+        "lib/xamarinmac20/Lottie.Forms.pdb",
+        "lib/xamarinmac20/Lottie.Forms.xml",
+        "readme.txt"
+      ]
+    },
     "Microsoft.NETCore.Platforms/2.0.0": {
       "sha512": "VdLJOCXhZaEMY7Hm2GKiULmn7IEPFE4XC5LPSfBVCUIA8YLZVh846gtfBJalsPQF2PlzdD7ecX7DZEulJ402ZQ==",
       "type": "package",
@@ -350,6 +428,54 @@
         "lib/netstandard1.0/_._",
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
+      ]
+    },
+    "Rg.Plugins.Popup/2.0.0.8": {
+      "sha512": "o5c/USJm480mPJB9l0NlHmcTJYM6qNhP+f0XRqLqJP8+xUGBF6y3TBn4pRVRGgbpfoS/nuTEX4oQex7fcA5IMg==",
+      "type": "package",
+      "path": "rg.plugins.popup/2.0.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/monoandroid10.0/Rg.Plugins.Popup.dll",
+        "lib/monoandroid10.0/Rg.Plugins.Popup.pdb",
+        "lib/monoandroid10.0/Rg.Plugins.Popup.xml",
+        "lib/monoandroid90/Rg.Plugins.Popup.dll",
+        "lib/monoandroid90/Rg.Plugins.Popup.pdb",
+        "lib/monoandroid90/Rg.Plugins.Popup.xml",
+        "lib/net472/Rg.Plugins.Popup.dll",
+        "lib/net472/Rg.Plugins.Popup.pdb",
+        "lib/net472/Rg.Plugins.Popup.xml",
+        "lib/netcoreapp3.1/Rg.Plugins.Popup.dll",
+        "lib/netcoreapp3.1/Rg.Plugins.Popup.pdb",
+        "lib/netcoreapp3.1/Rg.Plugins.Popup.xml",
+        "lib/netstandard2.0/Rg.Plugins.Popup.dll",
+        "lib/netstandard2.0/Rg.Plugins.Popup.pdb",
+        "lib/netstandard2.0/Rg.Plugins.Popup.xml",
+        "lib/tizen80/Rg.Plugins.Popup.dll",
+        "lib/tizen80/Rg.Plugins.Popup.pdb",
+        "lib/tizen80/Rg.Plugins.Popup.xml",
+        "lib/uap10.0.17763/Rg.Plugins.Popup.dll",
+        "lib/uap10.0.17763/Rg.Plugins.Popup.pdb",
+        "lib/uap10.0.17763/Rg.Plugins.Popup.pri",
+        "lib/uap10.0.17763/Rg.Plugins.Popup.xml",
+        "lib/xamarinios10/Rg.Plugins.Popup.dll",
+        "lib/xamarinios10/Rg.Plugins.Popup.pdb",
+        "lib/xamarinios10/Rg.Plugins.Popup.xml",
+        "lib/xamarinmac20/Rg.Plugins.Popup.dll",
+        "lib/xamarinmac20/Rg.Plugins.Popup.pdb",
+        "lib/xamarinmac20/Rg.Plugins.Popup.xml",
+        "lib/xamarintvos10/Rg.Plugins.Popup.dll",
+        "lib/xamarintvos10/Rg.Plugins.Popup.pdb",
+        "lib/xamarintvos10/Rg.Plugins.Popup.xml",
+        "lib/xamarinwatchos10/Rg.Plugins.Popup.dll",
+        "lib/xamarinwatchos10/Rg.Plugins.Popup.pdb",
+        "lib/xamarinwatchos10/Rg.Plugins.Popup.xml",
+        "readme.txt",
+        "rg.plugins.popup.2.0.0.8.nupkg.sha512",
+        "rg.plugins.popup.nuspec"
       ]
     },
     "System.Buffers/4.4.0": {
@@ -1147,6 +1273,51 @@
         "xamarin.forms.4.8.0.1451.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
+    },
+    "XF.Material/1.7.7": {
+      "sha512": "+SAYdqqem4Xi1ZfCF7YpsYlNvqMlblFMngqjPVcKU+Dsl0AQ8VmFbbMtriFU/JZZfWYb5S2P905h6EcWZK4nyQ==",
+      "type": "package",
+      "path": "xf.material/1.7.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/monoandroid10.0/XF.Material.dll",
+        "lib/monoandroid10.0/XF.Material.pdb",
+        "lib/monoandroid10.0/XF.Material.xml",
+        "lib/net472/XF.Material.dll",
+        "lib/net472/XF.Material.pdb",
+        "lib/net472/XF.Material.xml",
+        "lib/netcoreapp3.1/XF.Material.dll",
+        "lib/netcoreapp3.1/XF.Material.pdb",
+        "lib/netcoreapp3.1/XF.Material.xml",
+        "lib/netstandard2.0/XF.Material.dll",
+        "lib/netstandard2.0/XF.Material.pdb",
+        "lib/netstandard2.0/XF.Material.xml",
+        "lib/tizen40/XF.Material.dll",
+        "lib/tizen40/XF.Material.pdb",
+        "lib/tizen40/XF.Material.xml",
+        "lib/uap10.0.17763/XF.Material.dll",
+        "lib/uap10.0.17763/XF.Material.pdb",
+        "lib/uap10.0.17763/XF.Material.pri",
+        "lib/uap10.0.17763/XF.Material.xml",
+        "lib/xamarinios10/XF.Material.dll",
+        "lib/xamarinios10/XF.Material.pdb",
+        "lib/xamarinios10/XF.Material.xml",
+        "lib/xamarinmac20/XF.Material.dll",
+        "lib/xamarinmac20/XF.Material.pdb",
+        "lib/xamarinmac20/XF.Material.xml",
+        "lib/xamarintvos10/XF.Material.dll",
+        "lib/xamarintvos10/XF.Material.pdb",
+        "lib/xamarintvos10/XF.Material.xml",
+        "lib/xamarinwatchos10/XF.Material.dll",
+        "lib/xamarinwatchos10/XF.Material.pdb",
+        "lib/xamarinwatchos10/XF.Material.xml",
+        "readme.txt",
+        "xf.material.1.7.7.nupkg.sha512",
+        "xf.material.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -1156,6 +1327,7 @@
       "System.ServiceModel.Http >= 4.4.*",
       "System.ServiceModel.NetTcp >= 4.4.*",
       "System.ServiceModel.Security >= 4.4.*",
+      "XF.Material >= 1.7.7",
       "Xamarin.Essentials >= 1.5.3.2",
       "Xamarin.Forms >= 4.8.0.1451"
     ]
@@ -1225,6 +1397,10 @@
           "System.ServiceModel.Security": {
             "target": "Package",
             "version": "[4.4.*, )"
+          },
+          "XF.Material": {
+            "target": "Package",
+            "version": "[1.7.7, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",

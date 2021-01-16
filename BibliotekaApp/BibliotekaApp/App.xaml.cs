@@ -12,7 +12,7 @@ namespace BibliotekaApp
         public App()
         {
             InitializeComponent();
-
+            XF.Material.Forms.Material.Init(this);
             DependencyService.Register<AutorDataStore>();
             DependencyService.Register<EgzemplarzDataStore>();
             DependencyService.Register<CzytelnikDataStore>();

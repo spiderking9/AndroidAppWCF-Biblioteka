@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 using BibliotekaApp.Models;
+using BibliotekaApp.Services;
 
 namespace BibliotekaApp.ViewModels.Nowy
 {
     public class NowyZamownienieViewModel : ANewItemViewModel<Zamowieniaa>
     {
-        private int _IdKsiazki;
-        private int _IdPracownika;
-        private int _IdKsiegarni;
+        private Ksiazki _SelectedKsiazka;
+        private Pracownicyy _SelectedPracownik;
+        private Ksiegarnie _SelectedKsiegarnia;
         private int _RokWydania;
 
         public NowyZamownienieViewModel()
@@ -21,20 +22,41 @@ namespace BibliotekaApp.ViewModels.Nowy
             return true;
             //return !String.IsNullOrWhiteSpace(_Imie);
         }
-        public int IdKsiazki
+        public List<Ksiazki> Ksiazki
         {
-            get => _IdKsiazki;
-            set => SetProperty(ref _IdKsiazki, value);
+            get
+            {
+                return new KsiazkaDataStore().items;
+            }
         }
-        public int IdPracownika
+        public Ksiazki SelectedKsiazka
         {
-            get => _IdPracownika;
-            set => SetProperty(ref _IdPracownika, value);
+            get => _SelectedKsiazka;
+            set => SetProperty(ref _SelectedKsiazka, value);
         }
-        public int IdKsiegarni
+        public List<Pracownicyy> Pracownicy
         {
-            get => _IdKsiegarni;
-            set => SetProperty(ref _IdKsiegarni, value);
+            get
+            {
+                return new PracownikDataStore().items;
+            }
+        }
+        public Pracownicyy SelectedPracownik
+        {
+            get => _SelectedPracownik;
+            set => SetProperty(ref _SelectedPracownik, value);
+        }
+        public List<Ksiegarnie> Ksiegarnie
+        {
+            get
+            {
+                return new KsiegarniaDataStore().items;
+            }
+        }
+        public Ksiegarnie SelectedKsiegarnia
+        {
+            get => _SelectedKsiegarnia;
+            set => SetProperty(ref _SelectedKsiegarnia, value);
         }
         public int RokWydania
         {
@@ -45,9 +67,9 @@ namespace BibliotekaApp.ViewModels.Nowy
         {
             Zamowieniaa newItem = new Zamowieniaa()
             {
-                IdKsiazki = IdKsiazki,
-                IdPracownika = IdPracownika,
-                IdKsiegarni = IdKsiegarni,
+                IdKsiazki = SelectedKsiazka.IdKsiazki,
+                IdPracownika = SelectedPracownik.IdPracownika,
+                IdKsiegarni = SelectedKsiegarnia.IdKsiegarni,
                 RokWydania = RokWydania
             };
             return newItem;

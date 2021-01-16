@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BibliotekaApp.Models;
 using BibliotekaApp.ViewModels.Lista;
 
 using Xamarin.Forms;
@@ -22,6 +23,11 @@ namespace BibliotekaApp.Views.Lista
         {
             base.OnAppearing();
             _viewModel.OnAppearing();
+        }
+
+        private void ItemsListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //var xx=(e.CurrentSelection.FirstOrDefault() as Ksiazki)?.NazwaGatunku;
         }
     }
 }

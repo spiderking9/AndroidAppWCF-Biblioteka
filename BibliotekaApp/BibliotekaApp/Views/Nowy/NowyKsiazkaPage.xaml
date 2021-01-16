@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BibliotekaApp.Views.Nowy.NowyKsiazkaPage"
+             xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
              Shell.PresentationMode="ModalAnimated"
              Title="Nowy Ksiazka">
     <ContentPage.Content>
@@ -10,13 +11,14 @@
             <Entry Text="{Binding Tytul, Mode=TwoWay}" FontSize="Medium" />
             <Label Text="LiczbaEgzDostepnych" FontSize="Medium" />
             <Editor Text="{Binding LiczbaEgzDostepnych, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
-            <Label Text="Klient" FontSize="Medium" />
+            <Label Text="Gatunek" FontSize="Medium" />
             <Picker Title="Wybierz Gatunek" ItemsSource="{Binding Gatunki}" ItemDisplayBinding="{Binding NazwaGatunku}" 
                     SelectedItem="{Binding SelectedGatunki}" FontSize="Medium" Margin="0" />
-            
+            <material:MaterialCheckboxGroup Choices="{Binding checkboxlist}" RotationX="13" RotationY="10" Margin="60,0,0,0"/>
             <StackLayout Orientation="Horizontal">
                 <Button Text="Anuluj" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
                 <Button Text="Zapisz" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>
+                <material:MaterialButton BackgroundColor="#EAEAEA" HorizontalOptions="Center" Text="Elevated Button" TextColor="Black" VerticalOptions="Center" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

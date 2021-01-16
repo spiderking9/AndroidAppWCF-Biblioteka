@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using BibliotekaApp.Models;
+using BibliotekaApp.Services;
 
 namespace BibliotekaApp.ViewModels.Nowy
 {
@@ -10,11 +11,19 @@ namespace BibliotekaApp.ViewModels.Nowy
         private string _Imie;
         private string _Nazwisko;
         private string _Pesel;
-        private int _IdFilii;
+        private Filie _SelectedFilie;
 
         public NowyPracownikViewModel()
             : base()
         {
+            _SelectedFilie = new Filie();
+        }
+        public List<Filie> Filie
+        {
+            get
+            {
+                return new FilieDataStore().items;
+            }
         }
         public override bool ValidateSave()
         {
@@ -35,10 +44,10 @@ namespace BibliotekaApp.ViewModels.Nowy
             get => _Pesel;
             set => SetProperty(ref _Pesel, value);
         }
-        public int IdFilii
+        public Filie SelectedFilie
         {
-            get => _IdFilii;
-            set => SetProperty(ref _IdFilii, value);
+            get => _SelectedFilie;
+            set => SetProperty(ref _SelectedFilie, value);
         }
         public override Pracownicyy SetItem()
         {
@@ -47,7 +56,7 @@ namespace BibliotekaApp.ViewModels.Nowy
                 Imie = Imie,
                 Nazwisko = Nazwisko,
                 Pesel = Pesel,
-                IdFilii= IdFilii
+                IdFilii= SelectedFilie.IdFili
             };
             return newItem;
         }

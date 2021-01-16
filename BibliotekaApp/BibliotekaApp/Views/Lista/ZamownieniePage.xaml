@@ -16,15 +16,15 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout Padding="10" x:DataType="model:Zamowieniaa">
-                        <Label Text="{Binding IdKsiazki}" 
+                        <Label Text="{Binding KsiazkaTytul}" 
                             LineBreakMode="NoWrap" 
                             Style="{DynamicResource ListItemTextStyle}" 
                             FontSize="16" />
-                        <Label Text="{Binding IdPracownika}" 
+                        <Label Text="{Binding PracownikNazwisko}" 
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource ListItemDetailTextStyle}"
                             FontSize="13" />
-                        <Label Text="{Binding IdKsiegarni}" 
+                        <Label Text="{Binding KsiegarniaNazwa}" 
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource ListItemDetailTextStyle}"
                             FontSize="13" />

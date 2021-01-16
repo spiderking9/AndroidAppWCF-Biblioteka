@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "2lb8xlgBXYhDYN5AZNWwfAb6LGo+CC1LqVHRBKxFoEBPAg+ppi++7EY3/mcDu6FXrI9vd7u2S2uZFELugQlZ2g==",
+  "dgSpecHash": "LCun/OCPZCn0BdmJ4t9d645Cn3SLgq8OdHVU7UoomV7KVSk/nh8dUTeowndqPi7Sj/1XKfB8kmrKw9GPkP1p8w==",
   "success": true,
   "projectFilePath": "C:\\WcfProjektFirmy\\BibliotekaApp\\BibliotekaApp\\BibliotekaApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Luk\\.nuget\\packages\\com.airbnb.xamarin.forms.lottie\\4.0.8\\com.airbnb.xamarin.forms.lottie.4.0.8.nupkg.sha512",
     "C:\\Users\\Luk\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\Luk\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Luk\\.nuget\\packages\\rg.plugins.popup\\2.0.0.8\\rg.plugins.popup.2.0.0.8.nupkg.sha512",
     "C:\\Users\\Luk\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
     "C:\\Users\\Luk\\.nuget\\packages\\system.net.http.winhttphandler\\4.4.0\\system.net.http.winhttphandler.4.4.0.nupkg.sha512",
     "C:\\Users\\Luk\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
@@ -18,7 +20,8 @@
     "C:\\Users\\Luk\\.nuget\\packages\\system.servicemodel.primitives\\4.4.4\\system.servicemodel.primitives.4.4.4.nupkg.sha512",
     "C:\\Users\\Luk\\.nuget\\packages\\system.servicemodel.security\\4.4.4\\system.servicemodel.security.4.4.4.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512"
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512",
+    "C:\\Users\\Luk\\.nuget\\packages\\xf.material\\1.7.7\\xf.material.1.7.7.nupkg.sha512"
   ],
   "logs": []
 }

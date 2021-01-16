@@ -11,5 +11,6 @@ namespace BibliotekaApp.Models
         public string Nazwisko { get; set; }
         public string Pesel { get; set; }
         public int? IdFilii { get; set; }
+        public string FiliaNazwa { get; set; }
     }
 }

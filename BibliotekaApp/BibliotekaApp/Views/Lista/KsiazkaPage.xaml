@@ -7,15 +7,34 @@
              xmlns:model="clr-namespace:BibliotekaApp.Models" >
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Dodaj" Command="{Binding AddItemCommand}" />
+        <ToolbarItem Text="Edytuj" Command="{Binding OnItemSelected}" />
     </ContentPage.ToolbarItems>
-
+    <ContentPage.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="LightSkyBlue" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
     <RefreshView x:DataType="local:KsiazkaViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
         <CollectionView x:Name="ItemsListView"
                 ItemsSource="{Binding Items}"
-                SelectionMode="None">
-            <CollectionView.ItemTemplate>
+                SelectionMode="Single"
+                SelectedItems="{Binding SelectedItem}">
+            <CollectionView.ItemTemplate >
                 <DataTemplate>
-                    <StackLayout Padding="10" x:DataType="model:Ksiazki">
+                    <Grid>
+                    <StackLayout Padding="10" x:DataType="model:Ksiazki" >
                         <Label Text="{Binding Tytul}" 
                             LineBreakMode="NoWrap" 
                             Style="{DynamicResource ListItemTextStyle}" 
@@ -24,7 +43,7 @@
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource ListItemDetailTextStyle}"
                             FontSize="13" />
-                        <Label Text="{Binding IdGatunku}" 
+                        <Label Text="{Binding NazwaGatunku}" 
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource ListItemDetailTextStyle}"
                             FontSize="13" />
@@ -40,6 +59,7 @@
                             </TapGestureRecognizer>
                         </StackLayout.GestureRecognizers>
                     </StackLayout>
+                    </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

@@ -18,7 +18,7 @@ namespace BibliotekaApp.Services
                 Imie = k.Imie,
                 Nazwisko = k.Nazwisko,
                 Pesel = k.Pesel,
-                IdFilii=k.IdFilii
+                FiliaNazwa=k.FiliaNazwa
             }).ToList();
         }
 
