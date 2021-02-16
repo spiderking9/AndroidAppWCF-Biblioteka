@@ -17,11 +17,11 @@ namespace WcfProjektFirmy.Model.Entieties
         public int IdEgzemplarza { get; set; }
         public int IdKsiazki { get; set; }
         public int RokWydania { get; set; }
-        public Nullable<int> IdCzytelnika { get; set; }
+        public int IdCzytelnika { get; set; }
         public Nullable<System.DateTime> DataWypozyczenia { get; set; }
         public Nullable<System.DateTime> DataOddania { get; set; }
-        public Nullable<int> IdPracownika { get; set; }
-        public Nullable<bool> IsActive { get; set; }
+        public int IdPracownika { get; set; }
+        public bool IsActive { get; set; }
     
         public virtual Czytelnik Czytelnik { get; set; }
         public virtual Ksiazka Ksiazka { get; set; }

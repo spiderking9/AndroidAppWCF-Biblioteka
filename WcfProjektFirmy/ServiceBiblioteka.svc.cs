@@ -20,13 +20,26 @@ namespace WcfProjektFirmy
             (
                 from autor in db.Autor
                 where autor.IsActive == true
-                select new AutorForView
+                select new
                 {
                     IdAutora=autor.IdAutora,
                     Imie=autor.Imie,
                     Nazwisko=autor.Nazwisko,
-                    Opis=autor.Opis
+                    Opis=autor.Opis,
+                    Ksiazki=autor.Ksiazka_Autor.Select(ksiazka=>ksiazka.Ksiazka.Tytul).ToList(),
+                    IsActive=autor.IsActive
                 }
+                ).AsEnumerable().Select( autor=>
+                new AutorForView
+                {
+                    IdAutora = autor.IdAutora,
+                    Imie = autor.Imie,
+                    Nazwisko = autor.Nazwisko,
+                    Opis = autor.Opis,
+                    Ksiazki = autor.Ksiazki.Count > 0 ? autor.Ksiazki.Aggregate((x, y) => x + ',' + y) : "brak",
+                    IsActive = autor.IsActive
+                }
+
             ).ToList();
         }
 
@@ -43,7 +56,8 @@ namespace WcfProjektFirmy
                     Imie=czyte.Imie,
                     Nazwisko=czyte.Nazwisko,
                     Adres=czyte.Adres,
-                    Pesel = czyte.Pesel
+                    Pesel = czyte.Pesel,
+                    IsActive = czyte.IsActive
                 }
             ).ToList();
         }
@@ -122,16 +136,27 @@ namespace WcfProjektFirmy
         public List<KsiazkaForView> GetKsiazka()
         {
             BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
-            return (    
+            return (
                 from ksiaz in db.Ksiazka
-                where ksiaz.IsActive==true
-                select new KsiazkaForView
+                where ksiaz.IsActive == true
+                select new
                 {
-                    IdKsiazki=ksiaz.IdKsiazki,
-                    IdGatunku=ksiaz.IdGatunku,
-                    GatunekNazwa=ksiaz.Gatunek.NazwaGatunku,
-                    LiczbaEgzDostepnych=ksiaz.LiczbaEgzDostepnych,
-                    Tytul=ksiaz.Tytul
+                    IdKsiazki = ksiaz.IdKsiazki,
+                    IdGatunku = ksiaz.IdGatunku,
+                    GatunekNazwa = ksiaz.Gatunek.NazwaGatunku,
+                    LiczbaEgzDostepnych = ksiaz.LiczbaEgzDostepnych,
+                    Tytul = ksiaz.Tytul,
+                    Autorzy = ksiaz.Ksiazka_Autor.Select(autorzy => autorzy.Autor.Imie + " " + autorzy.Autor.Nazwisko).ToList()
+                }
+                ).AsEnumerable().Select(
+                ksiaz => new KsiazkaForView
+                {
+                    IdKsiazki = ksiaz.IdKsiazki,
+                    IdGatunku = ksiaz.IdGatunku,
+                    GatunekNazwa = ksiaz.GatunekNazwa,
+                    LiczbaEgzDostepnych = ksiaz.LiczbaEgzDostepnych,
+                    Tytul = ksiaz.Tytul,
+                    Autorzy=ksiaz.Autorzy.Count>0? ksiaz.Autorzy.Aggregate((x, y) => x + ',' + y):"brak"
                 }
                 ).ToList();
     }
@@ -247,6 +272,171 @@ namespace WcfProjektFirmy
         {
             BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
             db.Gatunek.Add(gatunek);
+            db.SaveChanges();
+        }
+
+        public void EditAutor(Autor autor)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            var zmiana=db.Autor.Where(a => a.IdAutora == autor.IdAutora).FirstOrDefault();
+            zmiana.Imie = autor.Imie;
+            zmiana.Nazwisko = autor.Nazwisko;
+            zmiana.Opis = autor.Opis;
+            db.SaveChanges();
+        }
+
+        public void EditCzytelnik(Czytelnik czytelnik)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            var zmiana = db.Czytelnik.Where(a => a.IdCzytelnika == czytelnik.IdCzytelnika).FirstOrDefault();
+            zmiana.Imie = czytelnik.Imie;
+            zmiana.Nazwisko = czytelnik.Nazwisko;
+            zmiana.Pesel = czytelnik.Pesel;
+            zmiana.Adres = czytelnik.Adres;
+            db.SaveChanges();
+        }
+
+        public void EditEgzemplarz(Egzemplarz egzem)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            var zmiana = db.Egzemplarz.Where(a => a.IdEgzemplarza == egzem.IdEgzemplarza).FirstOrDefault();
+            zmiana.IdKsiazki = egzem.IdKsiazki;
+            zmiana.RokWydania = egzem.RokWydania;
+            zmiana.IdCzytelnika = egzem.IdCzytelnika;
+            zmiana.DataWypozyczenia = egzem.DataWypozyczenia;
+            zmiana.DataOddania = egzem.DataOddania;
+            zmiana.IdPracownika = egzem.IdPracownika;
+            db.SaveChanges();
+        }
+
+        public void EditFilia(FilieBiblioteki filie)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            var zmiana = db.FilieBiblioteki.Where(a => a.IdFili == filie.IdFili).FirstOrDefault();
+            zmiana.Nazwa = filie.Nazwa;
+            zmiana.Adres = filie.Adres;
+            db.SaveChanges();
+        }
+
+        public void EditKsiazka(Ksiazka ksiazka)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            var zmiana = db.Ksiazka.Where(a => a.IdKsiazki == ksiazka.IdKsiazki).FirstOrDefault();
+            zmiana.Tytul = ksiazka.Tytul;
+            zmiana.LiczbaEgzDostepnych = ksiazka.LiczbaEgzDostepnych;
+            zmiana.IdGatunku = ksiazka.IdGatunku;
+            db.SaveChanges();
+        }
+
+        public void EditKsiegarnia(Ksiegarnia ksieg)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            var zmiana = db.Ksiegarnia.Where(a => a.IdKsiegarni == ksieg.IdKsiegarni).FirstOrDefault();
+            zmiana.Nazwa = ksieg.Nazwa;
+            zmiana.Adres = ksieg.Adres;
+            db.SaveChanges();
+        }
+
+        public void EditPracownicy(Pracownicy prac)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            var zmiana = db.Pracownicy.Where(a => a.IdPracownika == prac.IdPracownika).FirstOrDefault();
+            zmiana.Imie = prac.Imie;
+            zmiana.Nazwisko = prac.Nazwisko;
+            zmiana.Pesel = prac.Pesel;
+            zmiana.IdFilii = prac.IdFilii;
+            db.SaveChanges();
+        }
+
+        public void EditZamowienia(Zamowienia zamow)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            var zmiana = db.Zamowienia.Where(a => a.IdZamowienia == zamow.IdZamowienia).FirstOrDefault();
+            zmiana.IdKsiazki = zamow.IdKsiazki;
+            zmiana.IdPracownika = zamow.IdPracownika;
+            zmiana.IdKsiegarni = zamow.IdKsiegarni;
+            zmiana.RokWydania = zamow.RokWydania;
+            db.SaveChanges();
+        }
+
+        public void EditGatunki(Gatunek gatunek)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            var zmiana = db.Gatunek.Where(a => a.IdGatunku == gatunek.IdGatunku).FirstOrDefault();
+            zmiana.NazwaGatunku = gatunek.NazwaGatunku;
+            zmiana.Opis = gatunek.Opis;
+            db.SaveChanges();
+        }
+
+        public void DelAutor(int id)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            var zmiana = db.Autor.Where(a => a.IdAutora == id).FirstOrDefault();
+            zmiana.IsActive = false;
+            db.SaveChanges();
+        }
+
+        public void DelCzytelnik(int id)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            var zmiana = db.Czytelnik.Where(a => a.IdCzytelnika == id).FirstOrDefault();
+            zmiana.IsActive = false;
+            db.SaveChanges();
+        }
+
+        public void DelEgzemplarz(int id)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            var zmiana = db.Egzemplarz.Where(a => a.IdEgzemplarza == id).FirstOrDefault();
+            zmiana.IsActive = false;
+            db.SaveChanges();
+        }
+
+        public void DelFilia(int id)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            var zmiana = db.FilieBiblioteki.Where(a => a.IdFili == id).FirstOrDefault();
+            zmiana.IsActive = false;
+            db.SaveChanges();
+        }
+
+        public void DelKsiazka(int id)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            var zmiana = db.Ksiazka.Where(a => a.IdKsiazki == id).FirstOrDefault();
+            zmiana.IsActive = false;
+            db.SaveChanges();
+        }
+
+        public void DelKsiegarnia(int id)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            var zmiana = db.Ksiegarnia.Where(a => a.IdKsiegarni == id).FirstOrDefault();
+            zmiana.IsActive = false;
+            db.SaveChanges();
+        }
+
+        public void DelPracownicy(int id)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            var zmiana = db.Pracownicy.Where(a => a.IdPracownika == id).FirstOrDefault();
+            zmiana.IsActive = false;
+            db.SaveChanges();
+        }
+
+        public void DelZamowienia(int id)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            var zmiana = db.Zamowienia.Where(a => a.IdZamowienia == id).FirstOrDefault();
+            zmiana.IsActive = false;
+            db.SaveChanges();
+        }
+
+        public void DelGatunki(int id)
+        {
+            BibliotekaPlutaLukaszEntities db = new BibliotekaPlutaLukaszEntities();
+            var zmiana = db.Gatunek.Where(a => a.IdGatunku == id).FirstOrDefault();
+            zmiana.IsActive = false;
             db.SaveChanges();
         }
     }

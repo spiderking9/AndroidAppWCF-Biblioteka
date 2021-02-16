@@ -18,5 +18,10 @@ namespace BibliotekaApp.ViewModels.Lista
         {
             Shell.Current.GoToAsync(nameof(NowyZamowieniePage));
         }
+
+        public override void GoToEditPage(Zamowieniaa item)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

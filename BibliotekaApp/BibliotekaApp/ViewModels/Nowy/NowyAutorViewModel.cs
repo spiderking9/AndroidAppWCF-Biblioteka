@@ -13,6 +13,7 @@ namespace BibliotekaApp.ViewModels.Nowy
         public NowyAutorViewModel()
             : base()
         {
+
         }
         public override bool ValidateSave()
         {

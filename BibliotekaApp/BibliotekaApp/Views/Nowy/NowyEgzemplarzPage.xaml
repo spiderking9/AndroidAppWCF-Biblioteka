@@ -15,9 +15,9 @@
             <!--<Entry Text="{Binding IdCzytelnika, Mode=TwoWay}" FontSize="Medium" />-->
             <Picker Title="Wybierz Czytelnika" ItemsSource="{Binding Czytelnik}" ItemDisplayBinding="{Binding Nazwisko}" SelectedItem="{Binding SelectedCzytelnik}" FontSize="Medium" Margin="0" />
             <Label Text="DataWypozyczenia" FontSize="Medium" />
-            <Entry Text="{Binding DataWypozyczenia, Mode=TwoWay}" FontSize="Medium" />
+            <DatePicker Date="{Binding DataWypozyczenia, Mode=TwoWay}" FontSize="Medium" />
             <Label Text="DataOddania" FontSize="Medium" />
-            <Editor Text="{Binding DataOddania, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+            <DatePicker Date="{Binding DataOddania, Mode=TwoWay}" FontSize="Medium" Margin="0" />
             <Label Text="Pracownik" FontSize="Medium" />
             <!--<Entry Text="{Binding IdPracownika, Mode=TwoWay}" FontSize="Medium" />-->
             <Picker Title="Wybierz Pracownika" ItemsSource="{Binding Pracownik}" ItemDisplayBinding="{Binding Nazwisko}" SelectedItem="{Binding SelectedPracownik}" FontSize="Medium" Margin="0" />

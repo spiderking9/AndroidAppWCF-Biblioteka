@@ -67,12 +67,17 @@ namespace BibliotekaApp.ViewModels.Lista
         {
             GoToAddPage();
         }
-
-        async void OnItemSelected(T item)
+        public async virtual void GoToEditPage(T item)
         {
+        }
+
+        private async void OnItemSelected(T item)
+        {
+
             if (item == null)
                 return;
             // to jest przejście 
+            GoToEditPage(item);
             //await Shell.Current.GoToAsync($"{nameof(KlientDetailPage)}?{nameof(KlientDetailViewModel.ItemId)}={item.IdKlienta}");
         }
     }

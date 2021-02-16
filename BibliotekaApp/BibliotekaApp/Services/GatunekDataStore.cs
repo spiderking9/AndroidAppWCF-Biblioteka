@@ -32,6 +32,11 @@ namespace BibliotekaApp.Services
                 }));
         }
 
+        public override void DelItem(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public override Gatunki Find(Gatunki item)
         {
             return items.Where((Gatunki arg) => arg.IdGatunku == item.IdGatunku).FirstOrDefault();
@@ -41,5 +46,9 @@ namespace BibliotekaApp.Services
             return items.Where((Gatunki arg) => arg.IdGatunku == id).FirstOrDefault();
         }
 
+        public override void UpdateItem(Gatunki id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

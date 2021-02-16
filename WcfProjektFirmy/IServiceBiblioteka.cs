@@ -57,6 +57,45 @@ namespace WcfProjektFirmy
         [OperationContract]
         void AddGatunki(Gatunek gatunek);
 
+
+        [OperationContract]
+        void EditAutor(Autor autor);
+        [OperationContract]
+        void EditCzytelnik(Czytelnik czytelnik);
+        [OperationContract]
+        void EditEgzemplarz(Egzemplarz egzem);
+        [OperationContract]
+        void EditFilia(FilieBiblioteki filie);
+        [OperationContract]
+        void EditKsiazka(Ksiazka ksiazka);
+        [OperationContract]
+        void EditKsiegarnia(Ksiegarnia ksieg);
+        [OperationContract]
+        void EditPracownicy(Pracownicy prac);
+        [OperationContract]
+        void EditZamowienia(Zamowienia zamow);
+        [OperationContract]
+        void EditGatunki(Gatunek gatunek);
+
+        [OperationContract]
+        void DelAutor(int id);
+        [OperationContract]
+        void DelCzytelnik(int id);
+        [OperationContract]
+        void DelEgzemplarz(int id);
+        [OperationContract]
+        void DelFilia(int id);
+        [OperationContract]
+        void DelKsiazka(int id);
+        [OperationContract]
+        void DelKsiegarnia(int id);
+        [OperationContract]
+        void DelPracownicy(int id);
+        [OperationContract]
+        void DelZamowienia(int id);
+        [OperationContract]
+        void DelGatunki(int id);
+
         // TODO: Add your service operations here
     }
 
@@ -94,6 +133,10 @@ namespace WcfProjektFirmy
         public string Nazwisko { get; set; }
         [DataMember]
         public string Opis { get; set; }
+        [DataMember]
+        public string Ksiazki { get; set; }
+        [DataMember]
+        public bool IsActive { get; set; }
     }
     [DataContract]
     public class CzytelnikForView
@@ -108,6 +151,9 @@ namespace WcfProjektFirmy
         public string Adres { get; set; }
         [DataMember]
         public long Pesel { get; set; }
+        [DataMember]
+        public bool IsActive { get; set; }
+
     }
     [DataContract]
     public class EgzemplarzForView
@@ -132,6 +178,8 @@ namespace WcfProjektFirmy
         public int? IdPracownika { get; set; }
         [DataMember]
         public string PracownikNazwisko { get; set; }
+        [DataMember]
+        public bool IsActive { get; set; }
     }
 
     [DataContract]
@@ -143,6 +191,8 @@ namespace WcfProjektFirmy
         public string Nazwa { get; set; }
         [DataMember]
         public string Adres { get; set; }
+        [DataMember]
+        public bool IsActive { get; set; }
     }
 
     [DataContract]
@@ -154,6 +204,8 @@ namespace WcfProjektFirmy
         public string NazwaGatunku { get; set; }
         [DataMember]
         public string Opis { get; set; }
+        [DataMember]
+        public bool IsActive { get; set; }
     }
     [DataContract]
     public class KsiazkaForView
@@ -168,6 +220,10 @@ namespace WcfProjektFirmy
         public int IdGatunku { get; set; }
         [DataMember]
         public string GatunekNazwa { get; set; }
+        [DataMember]
+        public string Autorzy { get; set; }
+        [DataMember]
+        public bool IsActive { get; set; }
     }
 
     [DataContract]
@@ -179,6 +235,8 @@ namespace WcfProjektFirmy
         public string Nazwa { get; set; }
         [DataMember]
         public string Adres { get; set; }
+        [DataMember]
+        public bool IsActive { get; set; }
     }
     [DataContract]
     public class PracownicyForView
@@ -195,6 +253,8 @@ namespace WcfProjektFirmy
         public int? IdFilii { get; set; }
         [DataMember]
         public string FiliaNazwa { get; set; }
+        [DataMember]
+        public bool IsActive { get; set; }
     }
     [DataContract]
     public class ZamowieniaForView
@@ -215,5 +275,7 @@ namespace WcfProjektFirmy
         public string KsiegarniaNazwa { get; set; }
         [DataMember]
         public int? RokWydania { get; set; }
+        [DataMember]
+        public bool IsActive { get; set; }
     }
 }

@@ -9,23 +9,9 @@ namespace BibliotekaApp.Services
 {
     public class CzytelnikDataStore : ItemDataStore<Czytelnicy>
     {
-
         public CzytelnikDataStore()
         {
-            //items = new List<Czytelnicy>()
-            //{
-            //    new Czytelnicy {  Imie = "First item", Nazwisko="This is an item description.",Adres="fdsfsd" },
-            //    new Czytelnicy {  Imie = "First item", Nazwisko="This is an item description.",Adres="fdsfsd" },
-            //};
-
-            items = bibliotekaServices.GetCzytelnik(null).GetCzytelnikResult.Select(k => new Czytelnicy
-            {
-                IdCzytelnika=k.IdCzytelnika,
-                Imie = k.Imie,
-                Nazwisko = k.Nazwisko,
-                Adres = k.Adres,
-                Pesel = k.Pesel
-            }).ToList();
+            Load();
         }
 
         public override void AddItem(Czytelnicy item)
@@ -40,6 +26,24 @@ namespace BibliotekaApp.Services
                     Adres=item.Adres,
                     IsActive = true
                 }));
+            Load();
+        }
+        public void Load()
+        {
+            items = bibliotekaServices.GetCzytelnik(null).GetCzytelnikResult.Select(k => new Czytelnicy
+            {
+                IdCzytelnika = k.IdCzytelnika,
+                Imie = k.Imie,
+                Nazwisko = k.Nazwisko,
+                Adres = k.Adres,
+                Pesel = k.Pesel
+            }).ToList();
+        }
+
+        public override void DelItem(int id)
+        {
+            bibliotekaServices.DelCzytelnik(new DelCzytelnikRequest(id));
+            items.Remove(items.Where(s => s.IdCzytelnika == id).FirstOrDefault());
         }
 
         public override Czytelnicy Find(Czytelnicy item)
@@ -51,5 +55,22 @@ namespace BibliotekaApp.Services
             return items.Where((Czytelnicy arg) => arg.IdCzytelnika == id).FirstOrDefault();
         }
 
+        public override void UpdateItem(Czytelnicy item)
+        {
+            var zmienna = items.Where(x => x.IdCzytelnika == item.IdCzytelnika).FirstOrDefault();
+            zmienna.Imie = item.Imie;
+            zmienna.Nazwisko = item.Nazwisko;
+            zmienna.Adres = item.Adres;
+            zmienna.Pesel = item.Pesel;
+            bibliotekaServices.EditCzytelnik(new EditCzytelnikRequest(new Czytelnik
+            {
+                IdCzytelnika = item.IdCzytelnika,
+                Imie = item.Imie,
+                Nazwisko = item.Nazwisko,
+                Adres = item.Adres,
+                Pesel=item.Pesel,
+                IsActive = true
+            }));
+        }
     }
 }

@@ -1,15 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "kwGJrJ5hlXT4WLy/XK/Qid+dHHlAsoKztos+iXDcCLYeoIXCO/kBrMy/DP8/PoT8zYnbscsLIJWS22fAqpsmpg==",
+  "dgSpecHash": "3FIvu1oJ3UvNmmodbgyr7JP9hNh3P2V4jyFMz/TUOgAr4EIuYn9B/92m46Um58YVFqvvKVvNV1Of5DiNslt98g==",
   "success": true,
   "projectFilePath": "C:\\WcfProjektFirmy\\BibliotekaApp\\BibliotekaApp.iOS\\BibliotekaApp.iOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Luk\\.nuget\\packages\\com.airbnb.ios.lottie\\2.5.13\\com.airbnb.ios.lottie.2.5.13.nupkg.sha512",
+    "C:\\Users\\Luk\\.nuget\\packages\\com.airbnb.xamarin.forms.lottie\\4.0.8\\com.airbnb.xamarin.forms.lottie.4.0.8.nupkg.sha512",
+    "C:\\Users\\Luk\\.nuget\\packages\\rg.plugins.popup\\2.0.0.8\\rg.plugins.popup.2.0.0.8.nupkg.sha512",
     "C:\\Users\\Luk\\.nuget\\packages\\system.servicemodel.duplex\\4.4.4\\system.servicemodel.duplex.4.4.4.nupkg.sha512",
     "C:\\Users\\Luk\\.nuget\\packages\\system.servicemodel.http\\4.4.4\\system.servicemodel.http.4.4.4.nupkg.sha512",
     "C:\\Users\\Luk\\.nuget\\packages\\system.servicemodel.nettcp\\4.4.4\\system.servicemodel.nettcp.4.4.4.nupkg.sha512",
     "C:\\Users\\Luk\\.nuget\\packages\\system.servicemodel.security\\4.4.4\\system.servicemodel.security.4.4.4.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512"
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512",
+    "C:\\Users\\Luk\\.nuget\\packages\\xf.material\\1.7.7\\xf.material.1.7.7.nupkg.sha512"
   ],
   "logs": []
 }

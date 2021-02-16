@@ -1,7 +1,11 @@
-C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\BibliotekaApp.csprojAssemblyReference.cache
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\bin\Debug\netstandard2.0\BibliotekaApp.deps.json
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\bin\Debug\netstandard2.0\BibliotekaApp.dll
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\bin\Debug\netstandard2.0\ref\BibliotekaApp.dll
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\bin\Debug\netstandard2.0\BibliotekaApp.pdb
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Edytuj\AutorDetailPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Lista\AutorPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Lista\CzytelnikPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Lista\EgzemplarzPage.xaml.g.cs
@@ -24,11 +28,9 @@ C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\No
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\BibliotekaApp.AssemblyInfoInputs.cache
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\BibliotekaApp.AssemblyInfo.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\BibliotekaApp.csproj.CoreCompileInputs.cache
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\XamlC.stamp
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\BibliotekaApp.dll
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\ref\BibliotekaApp.dll
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\BibliotekaApp.pdb
-C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\bin\Debug\netstandard2.0\BibliotekaApp.deps.json
-C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\bin\Debug\netstandard2.0\BibliotekaApp.dll
-C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\bin\Debug\netstandard2.0\ref\BibliotekaApp.dll
-C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\bin\Debug\netstandard2.0\BibliotekaApp.pdb
-C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\BibliotekaApp.csprojAssemblyReference.cache
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.0\Views\Edytuj\CzytelnikDetailPage.xaml.g.cs

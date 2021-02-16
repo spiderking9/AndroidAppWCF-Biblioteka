@@ -23,7 +23,7 @@ namespace WcfProjektFirmy.Model.Entieties
         public int IdFili { get; set; }
         public string Nazwa { get; set; }
         public string Adres { get; set; }
-        public Nullable<bool> IsActive { get; set; }
+        public bool IsActive { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pracownicy> Pracownicy { get; set; }

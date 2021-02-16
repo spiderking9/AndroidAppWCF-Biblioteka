@@ -13,9 +13,9 @@ namespace BibliotekaApp.Models
         public int IdCzytelnika { get; set; }
         public string CzytelnikNazwisko { get; set; }
         public string DataWypozyczenia { get; set; }
-        public DateTime Data_Wypozyczenia { get; set; }
+        public DateTime? Data_Wypozyczenia { get; set; }
         public string DataOddania { get; set; }
-        public DateTime Data_Oddania { get; set; }
+        public DateTime? Data_Oddania { get; set; }
         public int IdPracownika { get; set; }
         public string PracownikNazwisko { get; set; }
     }

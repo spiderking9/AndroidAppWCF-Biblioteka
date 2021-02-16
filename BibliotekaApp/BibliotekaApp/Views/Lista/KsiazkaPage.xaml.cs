@@ -25,9 +25,5 @@ namespace BibliotekaApp.Views.Lista
             _viewModel.OnAppearing();
         }
 
-        private void ItemsListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            //var xx=(e.CurrentSelection.FirstOrDefault() as Ksiazki)?.NazwaGatunku;
-        }
     }
 }

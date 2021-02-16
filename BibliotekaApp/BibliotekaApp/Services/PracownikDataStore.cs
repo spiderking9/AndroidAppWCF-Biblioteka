@@ -36,6 +36,11 @@ namespace BibliotekaApp.Services
                 }));
         }
 
+        public override void DelItem(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public override Pracownicyy Find(Pracownicyy item)
         {
             return items.Where((Pracownicyy arg) => arg.IdPracownika == item.IdPracownika).FirstOrDefault();
@@ -45,5 +50,9 @@ namespace BibliotekaApp.Services
             return items.Where((Pracownicyy arg) => arg.IdPracownika == id).FirstOrDefault();
         }
 
+        public override void UpdateItem(Pracownicyy id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

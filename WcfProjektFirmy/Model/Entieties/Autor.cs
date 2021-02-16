@@ -24,7 +24,7 @@ namespace WcfProjektFirmy.Model.Entieties
         public string Imie { get; set; }
         public string Nazwisko { get; set; }
         public string Opis { get; set; }
-        public Nullable<bool> IsActive { get; set; }
+        public bool IsActive { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ksiazka_Autor> Ksiazka_Autor { get; set; }

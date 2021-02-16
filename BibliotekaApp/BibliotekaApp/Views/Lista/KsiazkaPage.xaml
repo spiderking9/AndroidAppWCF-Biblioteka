@@ -7,7 +7,6 @@
              xmlns:model="clr-namespace:BibliotekaApp.Models" >
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Dodaj" Command="{Binding AddItemCommand}" />
-        <ToolbarItem Text="Edytuj" Command="{Binding OnItemSelected}" />
     </ContentPage.ToolbarItems>
     <ContentPage.Resources>
         <Style TargetType="Grid">

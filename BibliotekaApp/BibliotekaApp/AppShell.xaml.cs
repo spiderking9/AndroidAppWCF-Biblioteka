@@ -1,6 +1,8 @@
 ﻿using BibliotekaApp.ViewModels.Nowy;
+using BibliotekaApp.ViewModels.Edytuj;
 using BibliotekaApp.ViewModels;
 using BibliotekaApp.Views.Nowy;
+using BibliotekaApp.Views.Edytuj;
 using BibliotekaApp.Views;
 using System;
 using System.Collections.Generic;
@@ -13,6 +15,11 @@ namespace BibliotekaApp
         public AppShell()
         {
             InitializeComponent();
+            Routing.RegisterRoute(nameof(AutorDetailPage), typeof(AutorDetailPage));
+            Routing.RegisterRoute(nameof(CzytelnikDetailPage), typeof(CzytelnikDetailPage));
+            Routing.RegisterRoute(nameof(EgzemplarzDetailPage), typeof(EgzemplarzDetailPage));
+
+
             Routing.RegisterRoute(nameof(NowyAutorPage), typeof(NowyAutorPage));
             Routing.RegisterRoute(nameof(NowyCzytelnikPage), typeof(NowyCzytelnikPage));
             Routing.RegisterRoute(nameof(NowyEgzemplarzPage), typeof(NowyEgzemplarzPage));

@@ -42,8 +42,8 @@ namespace BibliotekaApp.ViewModels.Nowy
             _SelectedCzytelnik = new Czytelnicy();
             _SelectedKsiazka = new Ksiazki();
             _SelectedPracownik = new Pracownicyy();
-            DataWypozyczenia = DateTime.Now;
             DataOddania = DateTime.Now;
+            DataWypozyczenia = DateTime.Now;
         }
         public override bool ValidateSave()
         {

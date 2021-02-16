@@ -59,6 +59,8 @@ namespace ServiceReferenceBiblioteka
         
         private string ImieField;
         
+        private bool IsActiveField;
+        
         private string KsiazkiField;
         
         private string NazwiskoField;
@@ -88,6 +90,19 @@ namespace ServiceReferenceBiblioteka
             set
             {
                 this.ImieField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsActive
+        {
+            get
+            {
+                return this.IsActiveField;
+            }
+            set
+            {
+                this.IsActiveField = value;
             }
         }
         
@@ -143,6 +158,8 @@ namespace ServiceReferenceBiblioteka
         
         private string ImieField;
         
+        private bool IsActiveField;
+        
         private string NazwiskoField;
         
         private long PeselField;
@@ -183,6 +200,19 @@ namespace ServiceReferenceBiblioteka
             set
             {
                 this.ImieField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsActive
+        {
+            get
+            {
+                return this.IsActiveField;
+            }
+            set
+            {
+                this.IsActiveField = value;
             }
         }
         
@@ -232,6 +262,8 @@ namespace ServiceReferenceBiblioteka
         private int IdKsiazkiField;
         
         private System.Nullable<int> IdPracownikaField;
+        
+        private bool IsActiveField;
         
         private string KsiazkaTytulField;
         
@@ -331,6 +363,19 @@ namespace ServiceReferenceBiblioteka
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsActive
+        {
+            get
+            {
+                return this.IsActiveField;
+            }
+            set
+            {
+                this.IsActiveField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string KsiazkaTytul
         {
             get
@@ -380,6 +425,8 @@ namespace ServiceReferenceBiblioteka
         
         private int IdFiliField;
         
+        private bool IsActiveField;
+        
         private string NazwaField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
@@ -409,6 +456,19 @@ namespace ServiceReferenceBiblioteka
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsActive
+        {
+            get
+            {
+                return this.IsActiveField;
+            }
+            set
+            {
+                this.IsActiveField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Nazwa
         {
             get
@@ -430,6 +490,8 @@ namespace ServiceReferenceBiblioteka
         
         private int IdGatunkuField;
         
+        private bool IsActiveField;
+        
         private string NazwaGatunkuField;
         
         private string OpisField;
@@ -444,6 +506,19 @@ namespace ServiceReferenceBiblioteka
             set
             {
                 this.IdGatunkuField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsActive
+        {
+            get
+            {
+                return this.IsActiveField;
+            }
+            set
+            {
+                this.IsActiveField = value;
             }
         }
         
@@ -487,6 +562,8 @@ namespace ServiceReferenceBiblioteka
         private int IdGatunkuField;
         
         private int IdKsiazkiField;
+        
+        private bool IsActiveField;
         
         private System.Nullable<int> LiczbaEgzDostepnychField;
         
@@ -545,6 +622,19 @@ namespace ServiceReferenceBiblioteka
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsActive
+        {
+            get
+            {
+                return this.IsActiveField;
+            }
+            set
+            {
+                this.IsActiveField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<int> LiczbaEgzDostepnych
         {
             get
@@ -581,6 +671,8 @@ namespace ServiceReferenceBiblioteka
         
         private int IdKsiegarniField;
         
+        private bool IsActiveField;
+        
         private string NazwaField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
@@ -606,6 +698,19 @@ namespace ServiceReferenceBiblioteka
             set
             {
                 this.IdKsiegarniField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsActive
+        {
+            get
+            {
+                return this.IsActiveField;
+            }
+            set
+            {
+                this.IsActiveField = value;
             }
         }
         
@@ -636,6 +741,8 @@ namespace ServiceReferenceBiblioteka
         private int IdPracownikaField;
         
         private string ImieField;
+        
+        private bool IsActiveField;
         
         private string NazwiskoField;
         
@@ -694,6 +801,19 @@ namespace ServiceReferenceBiblioteka
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsActive
+        {
+            get
+            {
+                return this.IsActiveField;
+            }
+            set
+            {
+                this.IsActiveField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Nazwisko
         {
             get
@@ -733,6 +853,8 @@ namespace ServiceReferenceBiblioteka
         private System.Nullable<int> IdPracownikaField;
         
         private int IdZamowieniaField;
+        
+        private bool IsActiveField;
         
         private string KsiazkaTytulField;
         
@@ -791,6 +913,19 @@ namespace ServiceReferenceBiblioteka
             set
             {
                 this.IdZamowieniaField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsActive
+        {
+            get
+            {
+                return this.IsActiveField;
+            }
+            set
+            {
+                this.IsActiveField = value;
             }
         }
         
@@ -857,7 +992,7 @@ namespace ServiceReferenceBiblioteka
         
         private string ImieField;
         
-        private System.Nullable<bool> IsActiveField;
+        private bool IsActiveField;
         
         private System.Collections.Generic.List<ServiceReferenceBiblioteka.Ksiazka_Autor> Ksiazka_AutorField;
         
@@ -892,7 +1027,7 @@ namespace ServiceReferenceBiblioteka
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> IsActive
+        public bool IsActive
         {
             get
             {
@@ -1277,15 +1412,15 @@ namespace ServiceReferenceBiblioteka
         
         private System.Nullable<System.DateTime> DataWypozyczeniaField;
         
-        private System.Nullable<int> IdCzytelnikaField;
+        private int IdCzytelnikaField;
         
         private int IdEgzemplarzaField;
         
         private int IdKsiazkiField;
         
-        private System.Nullable<int> IdPracownikaField;
+        private int IdPracownikaField;
         
-        private System.Nullable<bool> IsActiveField;
+        private bool IsActiveField;
         
         private ServiceReferenceBiblioteka.Ksiazka KsiazkaField;
         
@@ -1333,7 +1468,7 @@ namespace ServiceReferenceBiblioteka
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> IdCzytelnika
+        public int IdCzytelnika
         {
             get
             {
@@ -1372,7 +1507,7 @@ namespace ServiceReferenceBiblioteka
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> IdPracownika
+        public int IdPracownika
         {
             get
             {
@@ -1385,7 +1520,7 @@ namespace ServiceReferenceBiblioteka
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> IsActive
+        public bool IsActive
         {
             get
             {
@@ -1608,7 +1743,7 @@ namespace ServiceReferenceBiblioteka
         
         private string ImieField;
         
-        private System.Nullable<bool> IsActiveField;
+        private bool IsActiveField;
         
         private string NazwiskoField;
         
@@ -1667,7 +1802,7 @@ namespace ServiceReferenceBiblioteka
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> IsActive
+        public bool IsActive
         {
             get
             {
@@ -1858,7 +1993,7 @@ namespace ServiceReferenceBiblioteka
         
         private int IdFiliField;
         
-        private System.Nullable<bool> IsActiveField;
+        private bool IsActiveField;
         
         private string NazwaField;
         
@@ -1891,7 +2026,7 @@ namespace ServiceReferenceBiblioteka
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> IsActive
+        public bool IsActive
         {
             get
             {
@@ -2136,6 +2271,114 @@ namespace ServiceReferenceBiblioteka
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/AddGatunki", ReplyAction="http://tempuri.org/IServiceBiblioteka/AddGatunkiResponse")]
         System.Threading.Tasks.Task<ServiceReferenceBiblioteka.AddGatunkiResponse> AddGatunkiAsync(ServiceReferenceBiblioteka.AddGatunkiRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/EditAutor", ReplyAction="http://tempuri.org/IServiceBiblioteka/EditAutorResponse")]
+        ServiceReferenceBiblioteka.EditAutorResponse EditAutor(ServiceReferenceBiblioteka.EditAutorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/EditAutor", ReplyAction="http://tempuri.org/IServiceBiblioteka/EditAutorResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.EditAutorResponse> EditAutorAsync(ServiceReferenceBiblioteka.EditAutorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/EditCzytelnik", ReplyAction="http://tempuri.org/IServiceBiblioteka/EditCzytelnikResponse")]
+        ServiceReferenceBiblioteka.EditCzytelnikResponse EditCzytelnik(ServiceReferenceBiblioteka.EditCzytelnikRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/EditCzytelnik", ReplyAction="http://tempuri.org/IServiceBiblioteka/EditCzytelnikResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.EditCzytelnikResponse> EditCzytelnikAsync(ServiceReferenceBiblioteka.EditCzytelnikRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/EditEgzemplarz", ReplyAction="http://tempuri.org/IServiceBiblioteka/EditEgzemplarzResponse")]
+        ServiceReferenceBiblioteka.EditEgzemplarzResponse EditEgzemplarz(ServiceReferenceBiblioteka.EditEgzemplarzRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/EditEgzemplarz", ReplyAction="http://tempuri.org/IServiceBiblioteka/EditEgzemplarzResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.EditEgzemplarzResponse> EditEgzemplarzAsync(ServiceReferenceBiblioteka.EditEgzemplarzRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/EditFilia", ReplyAction="http://tempuri.org/IServiceBiblioteka/EditFiliaResponse")]
+        ServiceReferenceBiblioteka.EditFiliaResponse EditFilia(ServiceReferenceBiblioteka.EditFiliaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/EditFilia", ReplyAction="http://tempuri.org/IServiceBiblioteka/EditFiliaResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.EditFiliaResponse> EditFiliaAsync(ServiceReferenceBiblioteka.EditFiliaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/EditKsiazka", ReplyAction="http://tempuri.org/IServiceBiblioteka/EditKsiazkaResponse")]
+        ServiceReferenceBiblioteka.EditKsiazkaResponse EditKsiazka(ServiceReferenceBiblioteka.EditKsiazkaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/EditKsiazka", ReplyAction="http://tempuri.org/IServiceBiblioteka/EditKsiazkaResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.EditKsiazkaResponse> EditKsiazkaAsync(ServiceReferenceBiblioteka.EditKsiazkaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/EditKsiegarnia", ReplyAction="http://tempuri.org/IServiceBiblioteka/EditKsiegarniaResponse")]
+        ServiceReferenceBiblioteka.EditKsiegarniaResponse EditKsiegarnia(ServiceReferenceBiblioteka.EditKsiegarniaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/EditKsiegarnia", ReplyAction="http://tempuri.org/IServiceBiblioteka/EditKsiegarniaResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.EditKsiegarniaResponse> EditKsiegarniaAsync(ServiceReferenceBiblioteka.EditKsiegarniaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/EditPracownicy", ReplyAction="http://tempuri.org/IServiceBiblioteka/EditPracownicyResponse")]
+        ServiceReferenceBiblioteka.EditPracownicyResponse EditPracownicy(ServiceReferenceBiblioteka.EditPracownicyRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/EditPracownicy", ReplyAction="http://tempuri.org/IServiceBiblioteka/EditPracownicyResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.EditPracownicyResponse> EditPracownicyAsync(ServiceReferenceBiblioteka.EditPracownicyRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/EditZamowienia", ReplyAction="http://tempuri.org/IServiceBiblioteka/EditZamowieniaResponse")]
+        ServiceReferenceBiblioteka.EditZamowieniaResponse EditZamowienia(ServiceReferenceBiblioteka.EditZamowieniaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/EditZamowienia", ReplyAction="http://tempuri.org/IServiceBiblioteka/EditZamowieniaResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.EditZamowieniaResponse> EditZamowieniaAsync(ServiceReferenceBiblioteka.EditZamowieniaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/EditGatunki", ReplyAction="http://tempuri.org/IServiceBiblioteka/EditGatunkiResponse")]
+        ServiceReferenceBiblioteka.EditGatunkiResponse EditGatunki(ServiceReferenceBiblioteka.EditGatunkiRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/EditGatunki", ReplyAction="http://tempuri.org/IServiceBiblioteka/EditGatunkiResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.EditGatunkiResponse> EditGatunkiAsync(ServiceReferenceBiblioteka.EditGatunkiRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/DelAutor", ReplyAction="http://tempuri.org/IServiceBiblioteka/DelAutorResponse")]
+        ServiceReferenceBiblioteka.DelAutorResponse DelAutor(ServiceReferenceBiblioteka.DelAutorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/DelAutor", ReplyAction="http://tempuri.org/IServiceBiblioteka/DelAutorResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.DelAutorResponse> DelAutorAsync(ServiceReferenceBiblioteka.DelAutorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/DelCzytelnik", ReplyAction="http://tempuri.org/IServiceBiblioteka/DelCzytelnikResponse")]
+        ServiceReferenceBiblioteka.DelCzytelnikResponse DelCzytelnik(ServiceReferenceBiblioteka.DelCzytelnikRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/DelCzytelnik", ReplyAction="http://tempuri.org/IServiceBiblioteka/DelCzytelnikResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.DelCzytelnikResponse> DelCzytelnikAsync(ServiceReferenceBiblioteka.DelCzytelnikRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/DelEgzemplarz", ReplyAction="http://tempuri.org/IServiceBiblioteka/DelEgzemplarzResponse")]
+        ServiceReferenceBiblioteka.DelEgzemplarzResponse DelEgzemplarz(ServiceReferenceBiblioteka.DelEgzemplarzRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/DelEgzemplarz", ReplyAction="http://tempuri.org/IServiceBiblioteka/DelEgzemplarzResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.DelEgzemplarzResponse> DelEgzemplarzAsync(ServiceReferenceBiblioteka.DelEgzemplarzRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/DelFilia", ReplyAction="http://tempuri.org/IServiceBiblioteka/DelFiliaResponse")]
+        ServiceReferenceBiblioteka.DelFiliaResponse DelFilia(ServiceReferenceBiblioteka.DelFiliaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/DelFilia", ReplyAction="http://tempuri.org/IServiceBiblioteka/DelFiliaResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.DelFiliaResponse> DelFiliaAsync(ServiceReferenceBiblioteka.DelFiliaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/DelKsiazka", ReplyAction="http://tempuri.org/IServiceBiblioteka/DelKsiazkaResponse")]
+        ServiceReferenceBiblioteka.DelKsiazkaResponse DelKsiazka(ServiceReferenceBiblioteka.DelKsiazkaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/DelKsiazka", ReplyAction="http://tempuri.org/IServiceBiblioteka/DelKsiazkaResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.DelKsiazkaResponse> DelKsiazkaAsync(ServiceReferenceBiblioteka.DelKsiazkaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/DelKsiegarnia", ReplyAction="http://tempuri.org/IServiceBiblioteka/DelKsiegarniaResponse")]
+        ServiceReferenceBiblioteka.DelKsiegarniaResponse DelKsiegarnia(ServiceReferenceBiblioteka.DelKsiegarniaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/DelKsiegarnia", ReplyAction="http://tempuri.org/IServiceBiblioteka/DelKsiegarniaResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.DelKsiegarniaResponse> DelKsiegarniaAsync(ServiceReferenceBiblioteka.DelKsiegarniaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/DelPracownicy", ReplyAction="http://tempuri.org/IServiceBiblioteka/DelPracownicyResponse")]
+        ServiceReferenceBiblioteka.DelPracownicyResponse DelPracownicy(ServiceReferenceBiblioteka.DelPracownicyRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/DelPracownicy", ReplyAction="http://tempuri.org/IServiceBiblioteka/DelPracownicyResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.DelPracownicyResponse> DelPracownicyAsync(ServiceReferenceBiblioteka.DelPracownicyRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/DelZamowienia", ReplyAction="http://tempuri.org/IServiceBiblioteka/DelZamowieniaResponse")]
+        ServiceReferenceBiblioteka.DelZamowieniaResponse DelZamowienia(ServiceReferenceBiblioteka.DelZamowieniaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/DelZamowienia", ReplyAction="http://tempuri.org/IServiceBiblioteka/DelZamowieniaResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.DelZamowieniaResponse> DelZamowieniaAsync(ServiceReferenceBiblioteka.DelZamowieniaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/DelGatunki", ReplyAction="http://tempuri.org/IServiceBiblioteka/DelGatunkiResponse")]
+        ServiceReferenceBiblioteka.DelGatunkiResponse DelGatunki(ServiceReferenceBiblioteka.DelGatunkiRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/DelGatunki", ReplyAction="http://tempuri.org/IServiceBiblioteka/DelGatunkiResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.DelGatunkiResponse> DelGatunkiAsync(ServiceReferenceBiblioteka.DelGatunkiRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2754,6 +2997,546 @@ namespace ServiceReferenceBiblioteka
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EditAutor", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class EditAutorRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public ServiceReferenceBiblioteka.Autor autor;
+        
+        public EditAutorRequest()
+        {
+        }
+        
+        public EditAutorRequest(ServiceReferenceBiblioteka.Autor autor)
+        {
+            this.autor = autor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EditAutorResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class EditAutorResponse
+    {
+        
+        public EditAutorResponse()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EditCzytelnik", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class EditCzytelnikRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public ServiceReferenceBiblioteka.Czytelnik czytelnik;
+        
+        public EditCzytelnikRequest()
+        {
+        }
+        
+        public EditCzytelnikRequest(ServiceReferenceBiblioteka.Czytelnik czytelnik)
+        {
+            this.czytelnik = czytelnik;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EditCzytelnikResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class EditCzytelnikResponse
+    {
+        
+        public EditCzytelnikResponse()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EditEgzemplarz", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class EditEgzemplarzRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public ServiceReferenceBiblioteka.Egzemplarz egzem;
+        
+        public EditEgzemplarzRequest()
+        {
+        }
+        
+        public EditEgzemplarzRequest(ServiceReferenceBiblioteka.Egzemplarz egzem)
+        {
+            this.egzem = egzem;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EditEgzemplarzResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class EditEgzemplarzResponse
+    {
+        
+        public EditEgzemplarzResponse()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EditFilia", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class EditFiliaRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public ServiceReferenceBiblioteka.FilieBiblioteki filie;
+        
+        public EditFiliaRequest()
+        {
+        }
+        
+        public EditFiliaRequest(ServiceReferenceBiblioteka.FilieBiblioteki filie)
+        {
+            this.filie = filie;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EditFiliaResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class EditFiliaResponse
+    {
+        
+        public EditFiliaResponse()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EditKsiazka", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class EditKsiazkaRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public ServiceReferenceBiblioteka.Ksiazka ksiazka;
+        
+        public EditKsiazkaRequest()
+        {
+        }
+        
+        public EditKsiazkaRequest(ServiceReferenceBiblioteka.Ksiazka ksiazka)
+        {
+            this.ksiazka = ksiazka;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EditKsiazkaResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class EditKsiazkaResponse
+    {
+        
+        public EditKsiazkaResponse()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EditKsiegarnia", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class EditKsiegarniaRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public ServiceReferenceBiblioteka.Ksiegarnia ksieg;
+        
+        public EditKsiegarniaRequest()
+        {
+        }
+        
+        public EditKsiegarniaRequest(ServiceReferenceBiblioteka.Ksiegarnia ksieg)
+        {
+            this.ksieg = ksieg;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EditKsiegarniaResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class EditKsiegarniaResponse
+    {
+        
+        public EditKsiegarniaResponse()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EditPracownicy", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class EditPracownicyRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public ServiceReferenceBiblioteka.Pracownicy prac;
+        
+        public EditPracownicyRequest()
+        {
+        }
+        
+        public EditPracownicyRequest(ServiceReferenceBiblioteka.Pracownicy prac)
+        {
+            this.prac = prac;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EditPracownicyResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class EditPracownicyResponse
+    {
+        
+        public EditPracownicyResponse()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EditZamowienia", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class EditZamowieniaRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public ServiceReferenceBiblioteka.Zamowienia zamow;
+        
+        public EditZamowieniaRequest()
+        {
+        }
+        
+        public EditZamowieniaRequest(ServiceReferenceBiblioteka.Zamowienia zamow)
+        {
+            this.zamow = zamow;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EditZamowieniaResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class EditZamowieniaResponse
+    {
+        
+        public EditZamowieniaResponse()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EditGatunki", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class EditGatunkiRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public ServiceReferenceBiblioteka.Gatunek gatunek;
+        
+        public EditGatunkiRequest()
+        {
+        }
+        
+        public EditGatunkiRequest(ServiceReferenceBiblioteka.Gatunek gatunek)
+        {
+            this.gatunek = gatunek;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="EditGatunkiResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class EditGatunkiResponse
+    {
+        
+        public EditGatunkiResponse()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DelAutor", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class DelAutorRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public int id;
+        
+        public DelAutorRequest()
+        {
+        }
+        
+        public DelAutorRequest(int id)
+        {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DelAutorResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class DelAutorResponse
+    {
+        
+        public DelAutorResponse()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DelCzytelnik", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class DelCzytelnikRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public int id;
+        
+        public DelCzytelnikRequest()
+        {
+        }
+        
+        public DelCzytelnikRequest(int id)
+        {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DelCzytelnikResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class DelCzytelnikResponse
+    {
+        
+        public DelCzytelnikResponse()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DelEgzemplarz", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class DelEgzemplarzRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public int id;
+        
+        public DelEgzemplarzRequest()
+        {
+        }
+        
+        public DelEgzemplarzRequest(int id)
+        {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DelEgzemplarzResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class DelEgzemplarzResponse
+    {
+        
+        public DelEgzemplarzResponse()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DelFilia", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class DelFiliaRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public int id;
+        
+        public DelFiliaRequest()
+        {
+        }
+        
+        public DelFiliaRequest(int id)
+        {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DelFiliaResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class DelFiliaResponse
+    {
+        
+        public DelFiliaResponse()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DelKsiazka", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class DelKsiazkaRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public int id;
+        
+        public DelKsiazkaRequest()
+        {
+        }
+        
+        public DelKsiazkaRequest(int id)
+        {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DelKsiazkaResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class DelKsiazkaResponse
+    {
+        
+        public DelKsiazkaResponse()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DelKsiegarnia", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class DelKsiegarniaRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public int id;
+        
+        public DelKsiegarniaRequest()
+        {
+        }
+        
+        public DelKsiegarniaRequest(int id)
+        {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DelKsiegarniaResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class DelKsiegarniaResponse
+    {
+        
+        public DelKsiegarniaResponse()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DelPracownicy", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class DelPracownicyRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public int id;
+        
+        public DelPracownicyRequest()
+        {
+        }
+        
+        public DelPracownicyRequest(int id)
+        {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DelPracownicyResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class DelPracownicyResponse
+    {
+        
+        public DelPracownicyResponse()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DelZamowienia", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class DelZamowieniaRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public int id;
+        
+        public DelZamowieniaRequest()
+        {
+        }
+        
+        public DelZamowieniaRequest(int id)
+        {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DelZamowieniaResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class DelZamowieniaResponse
+    {
+        
+        public DelZamowieniaResponse()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DelGatunki", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class DelGatunkiRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public int id;
+        
+        public DelGatunkiRequest()
+        {
+        }
+        
+        public DelGatunkiRequest(int id)
+        {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DelGatunkiResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class DelGatunkiResponse
+    {
+        
+        public DelGatunkiResponse()
+        {
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     public interface IServiceBibliotekaChannel : ServiceReferenceBiblioteka.IServiceBiblioteka, System.ServiceModel.IClientChannel
     {
@@ -3004,6 +3787,186 @@ namespace ServiceReferenceBiblioteka
             return base.Channel.AddGatunkiAsync(request);
         }
         
+        public ServiceReferenceBiblioteka.EditAutorResponse EditAutor(ServiceReferenceBiblioteka.EditAutorRequest request)
+        {
+            return base.Channel.EditAutor(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.EditAutorResponse> EditAutorAsync(ServiceReferenceBiblioteka.EditAutorRequest request)
+        {
+            return base.Channel.EditAutorAsync(request);
+        }
+        
+        public ServiceReferenceBiblioteka.EditCzytelnikResponse EditCzytelnik(ServiceReferenceBiblioteka.EditCzytelnikRequest request)
+        {
+            return base.Channel.EditCzytelnik(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.EditCzytelnikResponse> EditCzytelnikAsync(ServiceReferenceBiblioteka.EditCzytelnikRequest request)
+        {
+            return base.Channel.EditCzytelnikAsync(request);
+        }
+        
+        public ServiceReferenceBiblioteka.EditEgzemplarzResponse EditEgzemplarz(ServiceReferenceBiblioteka.EditEgzemplarzRequest request)
+        {
+            return base.Channel.EditEgzemplarz(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.EditEgzemplarzResponse> EditEgzemplarzAsync(ServiceReferenceBiblioteka.EditEgzemplarzRequest request)
+        {
+            return base.Channel.EditEgzemplarzAsync(request);
+        }
+        
+        public ServiceReferenceBiblioteka.EditFiliaResponse EditFilia(ServiceReferenceBiblioteka.EditFiliaRequest request)
+        {
+            return base.Channel.EditFilia(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.EditFiliaResponse> EditFiliaAsync(ServiceReferenceBiblioteka.EditFiliaRequest request)
+        {
+            return base.Channel.EditFiliaAsync(request);
+        }
+        
+        public ServiceReferenceBiblioteka.EditKsiazkaResponse EditKsiazka(ServiceReferenceBiblioteka.EditKsiazkaRequest request)
+        {
+            return base.Channel.EditKsiazka(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.EditKsiazkaResponse> EditKsiazkaAsync(ServiceReferenceBiblioteka.EditKsiazkaRequest request)
+        {
+            return base.Channel.EditKsiazkaAsync(request);
+        }
+        
+        public ServiceReferenceBiblioteka.EditKsiegarniaResponse EditKsiegarnia(ServiceReferenceBiblioteka.EditKsiegarniaRequest request)
+        {
+            return base.Channel.EditKsiegarnia(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.EditKsiegarniaResponse> EditKsiegarniaAsync(ServiceReferenceBiblioteka.EditKsiegarniaRequest request)
+        {
+            return base.Channel.EditKsiegarniaAsync(request);
+        }
+        
+        public ServiceReferenceBiblioteka.EditPracownicyResponse EditPracownicy(ServiceReferenceBiblioteka.EditPracownicyRequest request)
+        {
+            return base.Channel.EditPracownicy(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.EditPracownicyResponse> EditPracownicyAsync(ServiceReferenceBiblioteka.EditPracownicyRequest request)
+        {
+            return base.Channel.EditPracownicyAsync(request);
+        }
+        
+        public ServiceReferenceBiblioteka.EditZamowieniaResponse EditZamowienia(ServiceReferenceBiblioteka.EditZamowieniaRequest request)
+        {
+            return base.Channel.EditZamowienia(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.EditZamowieniaResponse> EditZamowieniaAsync(ServiceReferenceBiblioteka.EditZamowieniaRequest request)
+        {
+            return base.Channel.EditZamowieniaAsync(request);
+        }
+        
+        public ServiceReferenceBiblioteka.EditGatunkiResponse EditGatunki(ServiceReferenceBiblioteka.EditGatunkiRequest request)
+        {
+            return base.Channel.EditGatunki(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.EditGatunkiResponse> EditGatunkiAsync(ServiceReferenceBiblioteka.EditGatunkiRequest request)
+        {
+            return base.Channel.EditGatunkiAsync(request);
+        }
+        
+        public ServiceReferenceBiblioteka.DelAutorResponse DelAutor(ServiceReferenceBiblioteka.DelAutorRequest request)
+        {
+            return base.Channel.DelAutor(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.DelAutorResponse> DelAutorAsync(ServiceReferenceBiblioteka.DelAutorRequest request)
+        {
+            return base.Channel.DelAutorAsync(request);
+        }
+        
+        public ServiceReferenceBiblioteka.DelCzytelnikResponse DelCzytelnik(ServiceReferenceBiblioteka.DelCzytelnikRequest request)
+        {
+            return base.Channel.DelCzytelnik(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.DelCzytelnikResponse> DelCzytelnikAsync(ServiceReferenceBiblioteka.DelCzytelnikRequest request)
+        {
+            return base.Channel.DelCzytelnikAsync(request);
+        }
+        
+        public ServiceReferenceBiblioteka.DelEgzemplarzResponse DelEgzemplarz(ServiceReferenceBiblioteka.DelEgzemplarzRequest request)
+        {
+            return base.Channel.DelEgzemplarz(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.DelEgzemplarzResponse> DelEgzemplarzAsync(ServiceReferenceBiblioteka.DelEgzemplarzRequest request)
+        {
+            return base.Channel.DelEgzemplarzAsync(request);
+        }
+        
+        public ServiceReferenceBiblioteka.DelFiliaResponse DelFilia(ServiceReferenceBiblioteka.DelFiliaRequest request)
+        {
+            return base.Channel.DelFilia(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.DelFiliaResponse> DelFiliaAsync(ServiceReferenceBiblioteka.DelFiliaRequest request)
+        {
+            return base.Channel.DelFiliaAsync(request);
+        }
+        
+        public ServiceReferenceBiblioteka.DelKsiazkaResponse DelKsiazka(ServiceReferenceBiblioteka.DelKsiazkaRequest request)
+        {
+            return base.Channel.DelKsiazka(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.DelKsiazkaResponse> DelKsiazkaAsync(ServiceReferenceBiblioteka.DelKsiazkaRequest request)
+        {
+            return base.Channel.DelKsiazkaAsync(request);
+        }
+        
+        public ServiceReferenceBiblioteka.DelKsiegarniaResponse DelKsiegarnia(ServiceReferenceBiblioteka.DelKsiegarniaRequest request)
+        {
+            return base.Channel.DelKsiegarnia(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.DelKsiegarniaResponse> DelKsiegarniaAsync(ServiceReferenceBiblioteka.DelKsiegarniaRequest request)
+        {
+            return base.Channel.DelKsiegarniaAsync(request);
+        }
+        
+        public ServiceReferenceBiblioteka.DelPracownicyResponse DelPracownicy(ServiceReferenceBiblioteka.DelPracownicyRequest request)
+        {
+            return base.Channel.DelPracownicy(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.DelPracownicyResponse> DelPracownicyAsync(ServiceReferenceBiblioteka.DelPracownicyRequest request)
+        {
+            return base.Channel.DelPracownicyAsync(request);
+        }
+        
+        public ServiceReferenceBiblioteka.DelZamowieniaResponse DelZamowienia(ServiceReferenceBiblioteka.DelZamowieniaRequest request)
+        {
+            return base.Channel.DelZamowienia(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.DelZamowieniaResponse> DelZamowieniaAsync(ServiceReferenceBiblioteka.DelZamowieniaRequest request)
+        {
+            return base.Channel.DelZamowieniaAsync(request);
+        }
+        
+        public ServiceReferenceBiblioteka.DelGatunkiResponse DelGatunki(ServiceReferenceBiblioteka.DelGatunkiRequest request)
+        {
+            return base.Channel.DelGatunki(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.DelGatunkiResponse> DelGatunkiAsync(ServiceReferenceBiblioteka.DelGatunkiRequest request)
+        {
+            return base.Channel.DelGatunkiAsync(request);
+        }
+        
         public virtual System.Threading.Tasks.Task OpenAsync()
         {
             return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndOpen));
@@ -3032,7 +3995,7 @@ namespace ServiceReferenceBiblioteka
         {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IServiceBiblioteka))
             {
-                return new System.ServiceModel.EndpointAddress("http://192.168.1.100:55555/ServiceBiblioteka.svc");
+                return new System.ServiceModel.EndpointAddress("http://9812acc60d7b.ngrok.io/ServiceBiblioteka.svc");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }

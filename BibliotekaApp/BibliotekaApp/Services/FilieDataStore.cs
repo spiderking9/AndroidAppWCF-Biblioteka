@@ -32,6 +32,11 @@ namespace BibliotekaApp.Services
                 }));
         }
 
+        public override void DelItem(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public override Filie Find(Filie item)
         {
             return items.Where((Filie arg) => arg.IdFili == item.IdFili).FirstOrDefault();
@@ -41,5 +46,9 @@ namespace BibliotekaApp.Services
             return items.Where((Filie arg) => arg.IdFili == id).FirstOrDefault();
         }
 
+        public override void UpdateItem(Filie id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

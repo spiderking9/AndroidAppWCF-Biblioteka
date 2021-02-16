@@ -11,6 +11,7 @@ namespace BibliotekaApp.Models
         public string Nazwisko { get; set; }
         public string Opis { get; set; }
         public string Ksiazki { get; set; }
+        public bool IsActive { get; set; }
 
     }
 }

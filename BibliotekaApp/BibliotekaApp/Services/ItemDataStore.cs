@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using ServiceReferenceBiblioteka;
 using System.Threading.Tasks;
+using System.Linq;
 using Xamarin.Forms;
 
 namespace BibliotekaApp.Services
@@ -18,25 +19,24 @@ namespace BibliotekaApp.Services
         public async Task<bool> AddItemAsync(T item)
         {
             AddItem(item);
-            items.Add(item);
             return await Task.FromResult(true);
         }
 
         public abstract T Find(T item);
         public abstract T Find(int id);
         public abstract void AddItem(T item);
+        public abstract void DelItem(int id);
+        public abstract void UpdateItem(T item);
 
         public async Task<bool> UpdateItemAsync(T item)
         {
-            var oldItem = Find(item);
-            items.Remove(oldItem);
-            items.Add(item);
+            UpdateItem(item);
             return await Task.FromResult(true);
         }
         public async Task<bool> DeleteItemAsync(int id)
         {
-            var oldItem = Find(id);
-            items.Remove(oldItem);
+            
+            DelItem(id);
             return await Task.FromResult(true);
         }
         public async Task<T> GetItemAsync(int id)

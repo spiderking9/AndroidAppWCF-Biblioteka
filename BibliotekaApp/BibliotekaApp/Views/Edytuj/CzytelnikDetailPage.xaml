@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BibliotekaApp.Views.Edytuj.CzytelnikDetailPage"
+             Shell.PresentationMode="ModalAnimated"
+             Title="Edycja Czytelnik">
+    <ContentPage.Content>
+        <StackLayout Spacing="3" Padding="15">
+            <Label Text="Imie" FontSize="Medium" />
+            <Entry Text="{Binding Imie, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="Nazwisko" FontSize="Medium" />
+            <Editor Text="{Binding Nazwisko, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+            <Label Text="Adres" FontSize="Medium" />
+            <Entry Text="{Binding Adres, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="Pesel" FontSize="Medium" />
+            <Entry Text="{Binding Pesel, Mode=TwoWay}" FontSize="Medium" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Anuluj" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="Usun" Command="{Binding DelCommand}" HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="Zapisz" Command="{Binding EditCommand}" HorizontalOptions="FillAndExpand"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
