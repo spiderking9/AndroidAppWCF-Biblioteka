@@ -56,7 +56,7 @@ namespace BibliotekaApp.ViewModels.Nowy
                 Imie = Imie,
                 Nazwisko = Nazwisko,
                 Pesel = Pesel,
-                IdFilii= SelectedFilie.IdFili
+                IdFili= SelectedFilie.IdFili
             };
             return newItem;
         }

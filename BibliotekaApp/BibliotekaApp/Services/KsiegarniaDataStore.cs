@@ -12,9 +12,14 @@ namespace BibliotekaApp.Services
 
         public KsiegarniaDataStore()
         {
+            Load();
+        }
+
+        private void Load()
+        {
             items = bibliotekaServices.GetKsiegarnia(null).GetKsiegarniaResult.Select(k => new Ksiegarnie
             {
-                IdKsiegarni=k.IdKsiegarni,
+                IdKsiegarni = k.IdKsiegarni,
                 Nazwa = k.Nazwa,
                 Adres = k.Adres
             }).ToList();
@@ -30,11 +35,14 @@ namespace BibliotekaApp.Services
                     Adres = item.Adres,
                     IsActive = true
                 }));
+            Load();
         }
 
         public override void DelItem(int id)
         {
-            throw new NotImplementedException();
+            bibliotekaServices.DelKsiegarnia(new DelKsiegarniaRequest(id));
+            items.Remove(items.Where(s => s.IdKsiegarni == id).FirstOrDefault());
+            Load();
         }
 
         public override Ksiegarnie Find(Ksiegarnie item)
@@ -46,9 +54,20 @@ namespace BibliotekaApp.Services
             return items.Where((Ksiegarnie arg) => arg.IdKsiegarni == id).FirstOrDefault();
         }
 
-        public override void UpdateItem(Ksiegarnie id)
+        public override void UpdateItem(Ksiegarnie item)
         {
-            throw new NotImplementedException();
+            var zmienna = items.Where(x => x.IdKsiegarni == item.IdKsiegarni).FirstOrDefault();
+            zmienna.Nazwa = item.Nazwa;
+            zmienna.Adres = item.Adres;
+
+
+            bibliotekaServices.EditKsiegarnia(new EditKsiegarniaRequest(new Ksiegarnia
+            {
+                IdKsiegarni = item.IdKsiegarni,
+                Nazwa = item.Nazwa,
+                Adres = item.Adres,
+                IsActive = true
+            }));
         }
     }
 }

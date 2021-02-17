@@ -44,6 +44,7 @@ namespace BibliotekaApp.Services
         {
             bibliotekaServices.DelCzytelnik(new DelCzytelnikRequest(id));
             items.Remove(items.Where(s => s.IdCzytelnika == id).FirstOrDefault());
+            Load();
         }
 
         public override Czytelnicy Find(Czytelnicy item)

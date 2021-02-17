@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using BibliotekaApp.Models;
+using BibliotekaApp.ViewModels.Edytuj;
+using BibliotekaApp.Views.Edytuj;
 using BibliotekaApp.Views.Nowy;
 using Xamarin.Forms;
 
@@ -19,9 +21,9 @@ namespace BibliotekaApp.ViewModels.Lista
             Shell.Current.GoToAsync(nameof(NowyZamowieniePage));
         }
 
-        public override void GoToEditPage(Zamowieniaa item)
+        public async override void GoToEditPage(Zamowieniaa item)
         {
-            throw new NotImplementedException();
+            await Shell.Current.GoToAsync($"{nameof(ZamowienieDetailPage)}?{nameof(ZamowieniaDetailViewModel.IdZamowienia)}={item.IdZamowienia}");
         }
     }
 }

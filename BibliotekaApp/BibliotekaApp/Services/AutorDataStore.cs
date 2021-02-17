@@ -44,6 +44,7 @@ namespace BibliotekaApp.Services
         {
             bibliotekaServices.DelAutor(new DelAutorRequest(id));
             items.Remove(items.Where(s=>s.IdAutora==id).FirstOrDefault());
+            Load();
         }
 
         public override Autorzy Find(Autorzy item)

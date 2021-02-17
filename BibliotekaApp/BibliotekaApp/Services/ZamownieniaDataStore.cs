@@ -12,11 +12,16 @@ namespace BibliotekaApp.Services
 
         public ZamownieniaDataStore()
         {
+            Load();
+        }
+
+        private void Load()
+        {
             items = bibliotekaServices.GetZamowienia(null).GetZamowieniaResult.Select(k => new Zamowieniaa
             {
-                IdZamowienia=k.IdZamowienia,
-                KsiazkaTytul=k.KsiazkaTytul,
-                PracownikNazwisko=k.PracownikNazwisko,
+                IdZamowienia = k.IdZamowienia,
+                KsiazkaTytul = k.KsiazkaTytul,
+                PracownikNazwisko = k.PracownikNazwisko,
                 KsiegarniaNazwa = k.KsiegarniaNazwa,
                 RokWydania = k.RokWydania
             }).ToList();
@@ -34,11 +39,14 @@ namespace BibliotekaApp.Services
                     RokWydania = item.RokWydania,
                     IsActive = true
                 }));
+            Load();
         }
 
         public override void DelItem(int id)
         {
-            throw new NotImplementedException();
+            bibliotekaServices.DelZamowienia(new DelZamowieniaRequest(id));
+            items.Remove(items.Where(s => s.IdZamowienia == id).FirstOrDefault());
+            Load();
         }
 
         public override Zamowieniaa Find(Zamowieniaa item)
@@ -50,9 +58,22 @@ namespace BibliotekaApp.Services
             return items.Where((Zamowieniaa arg) => arg.IdZamowienia == id).FirstOrDefault();
         }
 
-        public override void UpdateItem(Zamowieniaa id)
+        public override void UpdateItem(Zamowieniaa item)
         {
-            throw new NotImplementedException();
+            var zmienna = items.Where(x => x.IdZamowienia == item.IdZamowienia).FirstOrDefault();
+            zmienna.IdKsiazki = item.IdKsiazki;
+            zmienna.IdPracownika = item.IdPracownika;
+            zmienna.IdKsiegarni = item.IdKsiegarni;
+            zmienna.RokWydania = item.RokWydania;
+            bibliotekaServices.EditZamowienia(new EditZamowieniaRequest(new Zamowienia
+            {
+                IdZamowienia=item.IdZamowienia,
+                IdKsiazki = item.IdKsiazki,
+                IdPracownika = item.IdPracownika,
+                IdKsiegarni = item.IdKsiegarni,
+                RokWydania = item.RokWydania,
+                IsActive = true
+            }));
         }
     }
 }

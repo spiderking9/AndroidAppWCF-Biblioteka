@@ -18,6 +18,12 @@ namespace BibliotekaApp
             Routing.RegisterRoute(nameof(AutorDetailPage), typeof(AutorDetailPage));
             Routing.RegisterRoute(nameof(CzytelnikDetailPage), typeof(CzytelnikDetailPage));
             Routing.RegisterRoute(nameof(EgzemplarzDetailPage), typeof(EgzemplarzDetailPage));
+            Routing.RegisterRoute(nameof(FilieDetailPage), typeof(FilieDetailPage));
+            Routing.RegisterRoute(nameof(GatunekDetailPage), typeof(GatunekDetailPage));
+            Routing.RegisterRoute(nameof(KsiazkiDetailPage), typeof(KsiazkiDetailPage));
+            Routing.RegisterRoute(nameof(KsiegarnieDetailPage), typeof(KsiegarnieDetailPage));
+            Routing.RegisterRoute(nameof(PracownikDetailPage), typeof(PracownikDetailPage));
+            Routing.RegisterRoute(nameof(ZamowienieDetailPage), typeof(ZamowienieDetailPage));
 
 
             Routing.RegisterRoute(nameof(NowyAutorPage), typeof(NowyAutorPage));

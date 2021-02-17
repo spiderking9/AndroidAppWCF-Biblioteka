@@ -12,13 +12,18 @@ namespace BibliotekaApp.Services
 
         public PracownikDataStore()
         {
+            Load();
+        }
+
+        private void Load()
+        {
             items = bibliotekaServices.GetPracownicy(null).GetPracownicyResult.Select(k => new Pracownicyy
             {
-                IdPracownika=k.IdPracownika,
+                IdPracownika = k.IdPracownika,
                 Imie = k.Imie,
                 Nazwisko = k.Nazwisko,
                 Pesel = k.Pesel,
-                FiliaNazwa=k.FiliaNazwa
+                FiliaNazwa = k.FiliaNazwa
             }).ToList();
         }
 
@@ -31,14 +36,17 @@ namespace BibliotekaApp.Services
                     Imie = item.Imie,
                     Nazwisko = item.Nazwisko,
                     Pesel = item.Pesel,
-                    IdFilii=item.IdFilii,
+                    IdFilii=item.IdFili,
                     IsActive = true
                 }));
+            Load();
         }
 
         public override void DelItem(int id)
         {
-            throw new NotImplementedException();
+            bibliotekaServices.DelPracownicy(new DelPracownicyRequest(id));
+            items.Remove(items.Where(s => s.IdPracownika == id).FirstOrDefault());
+            Load();
         }
 
         public override Pracownicyy Find(Pracownicyy item)
@@ -50,9 +58,22 @@ namespace BibliotekaApp.Services
             return items.Where((Pracownicyy arg) => arg.IdPracownika == id).FirstOrDefault();
         }
 
-        public override void UpdateItem(Pracownicyy id)
+        public override void UpdateItem(Pracownicyy item)
         {
-            throw new NotImplementedException();
+            var zmienna = items.Where(x => x.IdPracownika == item.IdPracownika).FirstOrDefault();
+            zmienna.Imie = item.Imie;
+            zmienna.Nazwisko = item.Nazwisko;
+            zmienna.IdFili = item.IdFili;
+            zmienna.Pesel = item.Pesel;
+            bibliotekaServices.EditPracownicy(new EditPracownicyRequest(new Pracownicy
+            {
+                IdPracownika = item.IdPracownika,
+                Imie = item.Imie,
+                Nazwisko = item.Nazwisko,
+                IdFilii = item.IdFili,
+                Pesel = item.Pesel,
+                IsActive = true
+            }));
         }
     }
 }

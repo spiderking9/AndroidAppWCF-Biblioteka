@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BibliotekaApp.Views.Edytuj.ZamowienieDetailPage"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             Shell.PresentationMode="ModalAnimated"
+             Title="Edytuj Zamownienie">
+    <ContentPage.Content>
+        <StackLayout Spacing="3" Padding="15">
+            <Label Text="Ksiazka" FontSize="Medium" />
+            <Entry Text="{Binding IdKsiazki, Mode=TwoWay}" FontSize="Medium" />
+            <!--<Picker Title="Wybierz Ksiazke" ItemsSource="{Binding Ksiazki}" ItemDisplayBinding="{Binding Tytul}" 
+                    SelectedItem="{Binding SelectedKsiazka}" FontSize="Medium" Margin="0" />-->
+            <Label Text="Pracownik" FontSize="Medium" />
+            <Entry Text="{Binding IdPracownika, Mode=TwoWay}" FontSize="Medium" />
+            <!--<Picker Title="Wybierz Pracownika" ItemsSource="{Binding Pracownicy}" ItemDisplayBinding="{Binding Nazwisko}" 
+                    SelectedItem="{Binding SelectedPracownik}" FontSize="Medium" Margin="0" />-->
+            <Label Text="Ksiegarnia" FontSize="Medium" />
+            <Entry Text="{Binding IdKsiegarni, Mode=TwoWay}" FontSize="Medium" />
+            <!--<Picker Title="Wybierz Ksiegarnie" ItemsSource="{Binding Ksiegarnie}" ItemDisplayBinding="{Binding Nazwa}" 
+                    SelectedItem="{Binding SelectedKsiegarnia}" FontSize="Medium" Margin="0" />-->
+            <Label Text="RokWydania" FontSize="Medium" />
+            <Entry Text="{Binding RokWydania, Mode=TwoWay}" FontSize="Medium" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Anuluj" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="Usun" Command="{Binding DelCommand}" HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="Zapisz" Command="{Binding EditCommand}" HorizontalOptions="FillAndExpand"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

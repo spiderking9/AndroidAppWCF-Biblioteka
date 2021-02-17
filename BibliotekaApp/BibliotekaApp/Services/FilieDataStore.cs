@@ -12,9 +12,14 @@ namespace BibliotekaApp.Services
 
         public FilieDataStore()
         {
+            Load();
+        }
+
+        private void Load()
+        {
             items = bibliotekaServices.GetFilie(null).GetFilieResult.Select(k => new Filie
             {
-                IdFili=k.IdFili,
+                IdFili = k.IdFili,
                 Nazwa = k.Nazwa,
                 Adres = k.Adres
             }).ToList();
@@ -30,11 +35,14 @@ namespace BibliotekaApp.Services
                     Adres = item.Adres,
                     IsActive = true
                 }));
+            Load();
         }
 
         public override void DelItem(int id)
         {
-            throw new NotImplementedException();
+            bibliotekaServices.DelFilia(new DelFiliaRequest(id));
+            items.Remove(items.Where(s => s.IdFili == id).FirstOrDefault());
+            Load();
         }
 
         public override Filie Find(Filie item)
@@ -46,9 +54,18 @@ namespace BibliotekaApp.Services
             return items.Where((Filie arg) => arg.IdFili == id).FirstOrDefault();
         }
 
-        public override void UpdateItem(Filie id)
+        public override void UpdateItem(Filie item)
         {
-            throw new NotImplementedException();
+            var zmienna = items.Where(x => x.IdFili == item.IdFili).FirstOrDefault();
+            zmienna.Nazwa = item.Nazwa;
+            zmienna.Adres = item.Adres;
+            bibliotekaServices.EditFilia(new EditFiliaRequest(new FilieBiblioteki
+            {
+                IdFili = item.IdFili,
+                Nazwa = item.Nazwa,
+                Adres = item.Adres,
+                IsActive = true
+            }));
         }
     }
 }

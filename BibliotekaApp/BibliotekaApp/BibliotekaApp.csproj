@@ -31,6 +31,24 @@
     <Compile Update="Views\Edytuj\CzytelnikDetailPage.xaml.cs">
       <DependentUpon>CzytelnikDetailPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\Edytuj\FilieDetailPage.xaml.cs">
+      <DependentUpon>FilieDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Edytuj\GatunekDetailPage.xaml.cs">
+      <DependentUpon>GatunekDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Edytuj\KsiazkiDetailPage.xaml.cs">
+      <DependentUpon>KsiazkiDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Edytuj\KsiegarnieDetailPage.xaml.cs">
+      <DependentUpon>KsiegarnieDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Edytuj\ZamowienieDetailPage.xaml.cs">
+      <DependentUpon>ZamowienieDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Edytuj\PracownikDetailPage.xaml.cs">
+      <DependentUpon>PracownikDetailPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

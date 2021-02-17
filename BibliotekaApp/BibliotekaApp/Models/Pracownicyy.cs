@@ -10,7 +10,7 @@ namespace BibliotekaApp.Models
         public string Imie { get; set; }
         public string Nazwisko { get; set; }
         public string Pesel { get; set; }
-        public int? IdFilii { get; set; }
+        public int? IdFili { get; set; }
         public string FiliaNazwa { get; set; }
     }
 }

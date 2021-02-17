@@ -3995,7 +3995,7 @@ namespace ServiceReferenceBiblioteka
         {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IServiceBiblioteka))
             {
-                return new System.ServiceModel.EndpointAddress("http://9812acc60d7b.ngrok.io/ServiceBiblioteka.svc");
+                return new System.ServiceModel.EndpointAddress("http://06704e5c2fea.ngrok.io/ServiceBiblioteka.svc");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }

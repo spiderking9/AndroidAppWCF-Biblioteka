@@ -52,6 +52,7 @@ namespace BibliotekaApp.Services
         {
             bibliotekaServices.DelEgzemplarz(new DelEgzemplarzRequest(id));
             items.Remove(items.Where(s => s.IdEgzemplarza == id).FirstOrDefault());
+            Load();
         }
 
         public override Egzemplarze Find(Egzemplarze item)

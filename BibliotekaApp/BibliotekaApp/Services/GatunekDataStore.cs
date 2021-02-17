@@ -12,11 +12,16 @@ namespace BibliotekaApp.Services
 
         public GatunekDataStore()
         {
+            Load();
+        }
+
+        private void Load()
+        {
             items = bibliotekaServices.GetGatunek(null).GetGatunekResult.Select(k => new Gatunki
             {
-                IdGatunku=k.IdGatunku,
+                IdGatunku = k.IdGatunku,
                 NazwaGatunku = k.NazwaGatunku,
-                Opis = k.Opis?? "brak opisu",
+                Opis = k.Opis ?? "brak opisu",
             }).ToList();
         }
 
@@ -30,11 +35,14 @@ namespace BibliotekaApp.Services
                     Opis = item.Opis,
                     IsActive = true
                 }));
+            Load();
         }
 
         public override void DelItem(int id)
         {
-            throw new NotImplementedException();
+            bibliotekaServices.DelGatunki(new DelGatunkiRequest(id));
+            items.Remove(items.Where(s => s.IdGatunku == id).FirstOrDefault());
+            Load();
         }
 
         public override Gatunki Find(Gatunki item)
@@ -46,9 +54,18 @@ namespace BibliotekaApp.Services
             return items.Where((Gatunki arg) => arg.IdGatunku == id).FirstOrDefault();
         }
 
-        public override void UpdateItem(Gatunki id)
+        public override void UpdateItem(Gatunki item)
         {
-            throw new NotImplementedException();
+            var zmienna = items.Where(x => x.IdGatunku == item.IdGatunku).FirstOrDefault();
+            zmienna.NazwaGatunku = item.NazwaGatunku;
+            zmienna.Opis = item.Opis;
+            bibliotekaServices.EditGatunki(new EditGatunkiRequest(new Gatunek
+            {
+                IdGatunku = item.IdGatunku,
+                NazwaGatunku = item.NazwaGatunku,
+                Opis = item.Opis,
+                IsActive = true
+            }));
         }
     }
 }

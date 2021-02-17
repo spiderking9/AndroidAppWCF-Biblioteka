@@ -35,7 +35,6 @@ namespace BibliotekaApp.Services
         }
         public async Task<bool> DeleteItemAsync(int id)
         {
-            
             DelItem(id);
             return await Task.FromResult(true);
         }
