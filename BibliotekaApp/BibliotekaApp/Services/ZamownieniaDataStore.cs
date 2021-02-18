@@ -21,6 +21,9 @@ namespace BibliotekaApp.Services
             {
                 IdZamowienia = k.IdZamowienia,
                 KsiazkaTytul = k.KsiazkaTytul,
+                IdKsiazki=k.IdKsiazki,
+                IdKsiegarni=k.IdKsiegarni,
+                IdPracownika=k.IdPracownika,
                 PracownikNazwisko = k.PracownikNazwisko,
                 KsiegarniaNazwa = k.KsiegarniaNazwa,
                 RokWydania = k.RokWydania

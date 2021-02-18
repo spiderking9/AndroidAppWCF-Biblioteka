@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BibliotekaApp.Views.Business.WypozyczenieKsiazkiPage"
+             Title="Raport 1">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="4">
+                <Label Text="Data Od" FontSize="Medium" />
+                <DatePicker Date="{Binding DataOd, Mode=TwoWay}" FontSize="Medium" HorizontalOptions="Center" />
+                <Label Text="Data Do" FontSize="Medium" />
+                <DatePicker Date="{Binding DataDo, Mode=TwoWay}" FontSize="Medium" HorizontalOptions="Center" />
+                <Label Text="Ksiazka" FontSize="Medium" />
+                <Picker Title="Wybierz Ksiazke" ItemsSource="{Binding Ksiazki}" ItemDisplayBinding="{Binding Tytul}" SelectedItem="{Binding SelectedKsiazka}" FontSize="Medium" Margin="0" />
+            </StackLayout>
+
+            <StackLayout Margin="4">
+                <Label Text="Liczba Dni Wypozyczonej Ksiazki: " HorizontalOptions="Center"/>
+                <Label Text="{Binding WypozyczenieKsiazki, Mode=TwoWay}" HorizontalOptions="Center"/>
+                <Button Text="Wykonaj" Command="{Binding WypozyczenieKsiazkiCommand}" HorizontalOptions="Center" Margin="4"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

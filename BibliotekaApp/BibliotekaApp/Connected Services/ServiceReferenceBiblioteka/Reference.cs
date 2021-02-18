@@ -2379,6 +2379,32 @@ namespace ServiceReferenceBiblioteka
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/DelGatunki", ReplyAction="http://tempuri.org/IServiceBiblioteka/DelGatunkiResponse")]
         System.Threading.Tasks.Task<ServiceReferenceBiblioteka.DelGatunkiResponse> DelGatunkiAsync(ServiceReferenceBiblioteka.DelGatunkiRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/LiczbaDniWypozyczonejKsiazki", ReplyAction="http://tempuri.org/IServiceBiblioteka/LiczbaDniWypozyczonejKsiazkiResponse")]
+        ServiceReferenceBiblioteka.LiczbaDniWypozyczonejKsiazkiResponse LiczbaDniWypozyczonejKsiazki(ServiceReferenceBiblioteka.LiczbaDniWypozyczonejKsiazkiRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/LiczbaDniWypozyczonejKsiazki", ReplyAction="http://tempuri.org/IServiceBiblioteka/LiczbaDniWypozyczonejKsiazkiResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.LiczbaDniWypozyczonejKsiazkiResponse> LiczbaDniWypozyczonejKsiazkiAsync(ServiceReferenceBiblioteka.LiczbaDniWypozyczonejKsiazkiRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/LiczbaDniWypozyczeniaKsiazekPrzezPracownika" +
+            "", ReplyAction="http://tempuri.org/IServiceBiblioteka/LiczbaDniWypozyczeniaKsiazekPrzezPracownika" +
+            "Response")]
+        ServiceReferenceBiblioteka.LiczbaDniWypozyczeniaKsiazekPrzezPracownikaResponse LiczbaDniWypozyczeniaKsiazekPrzezPracownika(ServiceReferenceBiblioteka.LiczbaDniWypozyczeniaKsiazekPrzezPracownikaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/LiczbaDniWypozyczeniaKsiazekPrzezPracownika" +
+            "", ReplyAction="http://tempuri.org/IServiceBiblioteka/LiczbaDniWypozyczeniaKsiazekPrzezPracownika" +
+            "Response")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.LiczbaDniWypozyczeniaKsiazekPrzezPracownikaResponse> LiczbaDniWypozyczeniaKsiazekPrzezPracownikaAsync(ServiceReferenceBiblioteka.LiczbaDniWypozyczeniaKsiazekPrzezPracownikaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/IleDniMialaKsiazkiWypozyczoneDanaGrupaWieko" +
+            "wa", ReplyAction="http://tempuri.org/IServiceBiblioteka/IleDniMialaKsiazkiWypozyczoneDanaGrupaWieko" +
+            "waResponse")]
+        ServiceReferenceBiblioteka.IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaResponse IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowa(ServiceReferenceBiblioteka.IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceBiblioteka/IleDniMialaKsiazkiWypozyczoneDanaGrupaWieko" +
+            "wa", ReplyAction="http://tempuri.org/IServiceBiblioteka/IleDniMialaKsiazkiWypozyczoneDanaGrupaWieko" +
+            "waResponse")]
+        System.Threading.Tasks.Task<ServiceReferenceBiblioteka.IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaResponse> IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaAsync(ServiceReferenceBiblioteka.IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3537,6 +3563,140 @@ namespace ServiceReferenceBiblioteka
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="LiczbaDniWypozyczonejKsiazki", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class LiczbaDniWypozyczonejKsiazkiRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public int idKsiazki;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public System.DateTime DataOd;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=2)]
+        public System.DateTime DataDo;
+        
+        public LiczbaDniWypozyczonejKsiazkiRequest()
+        {
+        }
+        
+        public LiczbaDniWypozyczonejKsiazkiRequest(int idKsiazki, System.DateTime DataOd, System.DateTime DataDo)
+        {
+            this.idKsiazki = idKsiazki;
+            this.DataOd = DataOd;
+            this.DataDo = DataDo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="LiczbaDniWypozyczonejKsiazkiResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class LiczbaDniWypozyczonejKsiazkiResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public System.Nullable<decimal> LiczbaDniWypozyczonejKsiazkiResult;
+        
+        public LiczbaDniWypozyczonejKsiazkiResponse()
+        {
+        }
+        
+        public LiczbaDniWypozyczonejKsiazkiResponse(System.Nullable<decimal> LiczbaDniWypozyczonejKsiazkiResult)
+        {
+            this.LiczbaDniWypozyczonejKsiazkiResult = LiczbaDniWypozyczonejKsiazkiResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="LiczbaDniWypozyczeniaKsiazekPrzezPracownika", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class LiczbaDniWypozyczeniaKsiazekPrzezPracownikaRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public int IdPracownika;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public System.DateTime DataOd;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=2)]
+        public System.DateTime DataDo;
+        
+        public LiczbaDniWypozyczeniaKsiazekPrzezPracownikaRequest()
+        {
+        }
+        
+        public LiczbaDniWypozyczeniaKsiazekPrzezPracownikaRequest(int IdPracownika, System.DateTime DataOd, System.DateTime DataDo)
+        {
+            this.IdPracownika = IdPracownika;
+            this.DataOd = DataOd;
+            this.DataDo = DataDo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="LiczbaDniWypozyczeniaKsiazekPrzezPracownikaResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class LiczbaDniWypozyczeniaKsiazekPrzezPracownikaResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public System.Nullable<decimal> LiczbaDniWypozyczeniaKsiazekPrzezPracownikaResult;
+        
+        public LiczbaDniWypozyczeniaKsiazekPrzezPracownikaResponse()
+        {
+        }
+        
+        public LiczbaDniWypozyczeniaKsiazekPrzezPracownikaResponse(System.Nullable<decimal> LiczbaDniWypozyczeniaKsiazekPrzezPracownikaResult)
+        {
+            this.LiczbaDniWypozyczeniaKsiazekPrzezPracownikaResult = LiczbaDniWypozyczeniaKsiazekPrzezPracownikaResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowa", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public int RokOd;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public int RokDo;
+        
+        public IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaRequest()
+        {
+        }
+        
+        public IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaRequest(int RokOd, int RokDo)
+        {
+            this.RokOd = RokOd;
+            this.RokDo = RokDo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public System.Nullable<decimal> IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaResult;
+        
+        public IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaResponse()
+        {
+        }
+        
+        public IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaResponse(System.Nullable<decimal> IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaResult)
+        {
+            this.IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaResult = IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
     public interface IServiceBibliotekaChannel : ServiceReferenceBiblioteka.IServiceBiblioteka, System.ServiceModel.IClientChannel
     {
@@ -3967,6 +4127,36 @@ namespace ServiceReferenceBiblioteka
             return base.Channel.DelGatunkiAsync(request);
         }
         
+        public ServiceReferenceBiblioteka.LiczbaDniWypozyczonejKsiazkiResponse LiczbaDniWypozyczonejKsiazki(ServiceReferenceBiblioteka.LiczbaDniWypozyczonejKsiazkiRequest request)
+        {
+            return base.Channel.LiczbaDniWypozyczonejKsiazki(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.LiczbaDniWypozyczonejKsiazkiResponse> LiczbaDniWypozyczonejKsiazkiAsync(ServiceReferenceBiblioteka.LiczbaDniWypozyczonejKsiazkiRequest request)
+        {
+            return base.Channel.LiczbaDniWypozyczonejKsiazkiAsync(request);
+        }
+        
+        public ServiceReferenceBiblioteka.LiczbaDniWypozyczeniaKsiazekPrzezPracownikaResponse LiczbaDniWypozyczeniaKsiazekPrzezPracownika(ServiceReferenceBiblioteka.LiczbaDniWypozyczeniaKsiazekPrzezPracownikaRequest request)
+        {
+            return base.Channel.LiczbaDniWypozyczeniaKsiazekPrzezPracownika(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.LiczbaDniWypozyczeniaKsiazekPrzezPracownikaResponse> LiczbaDniWypozyczeniaKsiazekPrzezPracownikaAsync(ServiceReferenceBiblioteka.LiczbaDniWypozyczeniaKsiazekPrzezPracownikaRequest request)
+        {
+            return base.Channel.LiczbaDniWypozyczeniaKsiazekPrzezPracownikaAsync(request);
+        }
+        
+        public ServiceReferenceBiblioteka.IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaResponse IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowa(ServiceReferenceBiblioteka.IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaRequest request)
+        {
+            return base.Channel.IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowa(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReferenceBiblioteka.IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaResponse> IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaAsync(ServiceReferenceBiblioteka.IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaRequest request)
+        {
+            return base.Channel.IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowaAsync(request);
+        }
+        
         public virtual System.Threading.Tasks.Task OpenAsync()
         {
             return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndOpen));
@@ -3995,7 +4185,7 @@ namespace ServiceReferenceBiblioteka
         {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IServiceBiblioteka))
             {
-                return new System.ServiceModel.EndpointAddress("http://06704e5c2fea.ngrok.io/ServiceBiblioteka.svc");
+                return new System.ServiceModel.EndpointAddress("http://4498982444f7.ngrok.io/ServiceBiblioteka.svc");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }

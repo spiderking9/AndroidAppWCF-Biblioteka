@@ -96,6 +96,13 @@ namespace WcfProjektFirmy
         [OperationContract]
         void DelGatunki(int id);
 
+
+        [OperationContract]
+        decimal? LiczbaDniWypozyczonejKsiazki(int idKsiazki, DateTime DataOd, DateTime DataDo);
+        [OperationContract]
+        decimal? LiczbaDniWypozyczeniaKsiazekPrzezPracownika(int IdPracownika, DateTime DataOd, DateTime DataDo);
+        [OperationContract]
+        decimal? IleDniMialaKsiazkiWypozyczoneDanaGrupaWiekowa(int RokOd, int RokDo);
         // TODO: Add your service operations here
     }
 

@@ -38,6 +38,9 @@ C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.1\Bibliote
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.1\ref\BibliotekaApp.dll
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.1\BibliotekaApp.pdb
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.1\Views\Edytuj\KsiegarnieDetailPage.xaml.g.cs
-C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.1\BibliotekaApp.csprojAssemblyReference.cache
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.1\Views\Edytuj\PracownikDetailPage.xaml.g.cs
 C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.1\Views\Edytuj\ZamowienieDetailPage.xaml.g.cs
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.1\BibliotekaApp.csprojAssemblyReference.cache
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.1\Views\Business\WypozyczenieKsiazkiPage.xaml.g.cs
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.1\Views\Business\WypozyczenieKsiazkiGrupaWiekowaPage.xaml.g.cs
+C:\WcfProjektFirmy\BibliotekaApp\BibliotekaApp\obj\Debug\netstandard2.1\Views\Business\WypozyczenieKsiazkiPracownikPage.xaml.g.cs

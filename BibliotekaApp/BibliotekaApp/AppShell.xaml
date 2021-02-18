@@ -3,6 +3,7 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:BibliotekaApp.Views"
        xmlns:local2="clr-namespace:BibliotekaApp.Views.Lista"
+       xmlns:local3="clr-namespace:BibliotekaApp.Views.Business"
        Title="BibliotekaApp"
        x:Class="BibliotekaApp.AppShell">
 
@@ -91,6 +92,9 @@
         <ShellContent Title="Pracownicy" Icon="tab_feed.png" ContentTemplate="{DataTemplate local2:PracownikPage}" />
         <ShellContent Title="Zamowienie" Icon="tab_feed.png" ContentTemplate="{DataTemplate local2:ZamownieniePage}" />
         <ShellContent Title="Gatunki" Icon="tab_feed.png" ContentTemplate="{DataTemplate local2:GatunekPage}" />
+        <ShellContent Title="Raporty1" Icon="tab_feed.png" ContentTemplate="{DataTemplate local3:WypozyczenieKsiazkiPage}" />
+        <ShellContent Title="Raporty2" Icon="tab_feed.png" ContentTemplate="{DataTemplate local3:WypozyczenieKsiazkiPracownikPage}" />
+        <ShellContent Title="Raporty3" Icon="tab_feed.png" ContentTemplate="{DataTemplate local3:WypozyczenieKsiazkiGrupaWiekowaPage}" />
     </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->

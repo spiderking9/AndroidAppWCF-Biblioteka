@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BibliotekaApp.Views.Business.WypozyczenieKsiazkiGrupaWiekowaPage"
+             Title="Raport 3">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="4">
+                <Label Text="Data Od" FontSize="Medium" />
+                <Entry Text="{Binding DataOd, Mode=TwoWay}" FontSize="Medium" />
+                <Label Text="Data Do" FontSize="Medium" />
+                <Entry Text="{Binding DataDo, Mode=TwoWay}" FontSize="Medium" />
+            </StackLayout>
+            <StackLayout Margin="4">
+                <Label Text="Liczba Dni w grupie wiekowej: " HorizontalOptions="Center"/>
+                <Label Text="{Binding WypozyczenieKsiazkiGrupaWiekowaPracownik, Mode=TwoWay}" HorizontalOptions="Center"/>
+                <Button Text="Wykonaj" Command="{Binding WypozyczenieKsiazkiGrupaWiekowaPracownikCommand}" HorizontalOptions="Center" Margin="4"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

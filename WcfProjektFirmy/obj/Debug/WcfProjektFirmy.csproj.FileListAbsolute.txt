@@ -21,3 +21,4 @@ C:\WcfProjektFirmy\WcfProjektFirmy\obj\Debug\WcfProjektFirmy.csproj.CoreCompileI
 C:\WcfProjektFirmy\WcfProjektFirmy\obj\Debug\WcfProjektFirmy.csproj.CopyComplete
 C:\WcfProjektFirmy\WcfProjektFirmy\obj\Debug\WcfProjektFirmy.dll
 C:\WcfProjektFirmy\WcfProjektFirmy\obj\Debug\WcfProjektFirmy.pdb
+C:\WcfProjektFirmy\WcfProjektFirmy\obj\Debug\WcfProjektFirmy.csprojAssemblyReference.cache

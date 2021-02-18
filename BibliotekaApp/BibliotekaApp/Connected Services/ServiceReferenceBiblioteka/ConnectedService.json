@@ -6,7 +6,7 @@
   },
   "ExtendedData": {
     "inputs": [
-      "https://06704e5c2fea.ngrok.io/ServiceBiblioteka.svc"
+      "https://4498982444f7.ngrok.io/ServiceBiblioteka.svc"
     ],
     "collectionTypes": [
       "System.Collections.Generic.Dictionary`2",

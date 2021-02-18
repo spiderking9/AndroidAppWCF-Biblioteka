@@ -22,6 +22,7 @@ namespace BibliotekaApp.Services
                 IdKsiazki = k.IdKsiazki,
                 Tytul = k.Tytul,
                 LiczbaEgzDostepnych = k.LiczbaEgzDostepnych,
+                IdGatunku=k.IdGatunku,
                 NazwaGatunku = k.GatunekNazwa,
                 Autorzy = k.Autorzy
             }).ToList();

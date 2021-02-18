@@ -13,18 +13,21 @@ namespace BibliotekaApp.ViewModels.Lista
     {
         public IDataStore<T> DataStore => DependencyService.Get<IDataStore<T>>();
         private T _selectedItem;
-        public ObservableCollection<T> Items { get; }
+        public ObservableCollection<T> Items { get; set; }
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
         public Command<T> ItemTapped { get; }
 
+        public Command SortCommand { get; }
         public AItemsViewModel()
         {
             Items = new ObservableCollection<T>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
             ItemTapped = new Command<T>(OnItemSelected);
             AddItemCommand = new Command(OnAddItem);
+            SortCommand = new Command(OnSortItem);
         }
+
 
         async Task ExecuteLoadItemsCommand()
         {
@@ -79,6 +82,16 @@ namespace BibliotekaApp.ViewModels.Lista
             // to jest przejście 
             GoToEditPage(item);
             //await Shell.Current.GoToAsync($"{nameof(KlientDetailPage)}?{nameof(KlientDetailViewModel.ItemId)}={item.IdKlienta}");
+        }
+
+
+
+        public string FindText { get; set; }
+        public virtual void Sort() { }
+
+        private async void OnSortItem()
+        {
+            Sort();
         }
     }
 }

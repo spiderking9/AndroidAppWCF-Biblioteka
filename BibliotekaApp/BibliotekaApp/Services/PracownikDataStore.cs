@@ -23,6 +23,7 @@ namespace BibliotekaApp.Services
                 Imie = k.Imie,
                 Nazwisko = k.Nazwisko,
                 Pesel = k.Pesel,
+                IdFili=k.IdFilii,
                 FiliaNazwa = k.FiliaNazwa
             }).ToList();
         }

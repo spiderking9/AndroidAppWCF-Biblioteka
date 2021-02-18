@@ -7,6 +7,7 @@ using BibliotekaApp.Views;
 using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
+using BibliotekaApp.Views.Business;
 
 namespace BibliotekaApp
 {
@@ -35,6 +36,12 @@ namespace BibliotekaApp
             Routing.RegisterRoute(nameof(NowyPracownikPage), typeof(NowyPracownikPage));
             Routing.RegisterRoute(nameof(NowyZamowieniePage), typeof(NowyZamowieniePage));
             Routing.RegisterRoute(nameof(NowyGatunekPage), typeof(NowyGatunekPage));
+
+            Routing.RegisterRoute(nameof(WypozyczenieKsiazkiPage), typeof(WypozyczenieKsiazkiPage));
+            Routing.RegisterRoute(nameof(WypozyczenieKsiazkiPracownikPage), typeof(WypozyczenieKsiazkiPracownikPage));
+            Routing.RegisterRoute(nameof(WypozyczenieKsiazkiGrupaWiekowaPage), typeof(WypozyczenieKsiazkiGrupaWiekowaPage));
+
+
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)

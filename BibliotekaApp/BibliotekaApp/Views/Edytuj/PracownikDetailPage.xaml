@@ -13,7 +13,7 @@
             <Label Text="Pesel" FontSize="Medium" />
             <Entry Text="{Binding Pesel, Mode=TwoWay}" FontSize="Medium" />
             <Label Text="Filia" FontSize="Medium" />
-            <Entry Text="{Binding IdFilii, Mode=TwoWay}" FontSize="Medium" />
+            <Entry Text="{Binding IdFili, Mode=TwoWay}" FontSize="Medium" />
             <!--<Picker Title="Wybierz Filie" ItemsSource="{Binding Filie}" ItemDisplayBinding="{Binding Nazwa}" 
                     SelectedItem="{Binding SelectedFilie}" FontSize="Medium" Margin="0" />-->
             <StackLayout Orientation="Horizontal">
