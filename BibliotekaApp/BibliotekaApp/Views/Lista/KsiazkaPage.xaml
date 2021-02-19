@@ -8,59 +8,66 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Dodaj" Command="{Binding AddItemCommand}" />
     </ContentPage.ToolbarItems>
-    <ContentPage.Resources>
-        <Style TargetType="Grid">
-            <Setter Property="VisualStateManager.VisualStateGroups">
-                <VisualStateGroupList>
-                    <VisualStateGroup x:Name="CommonStates">
-                        <VisualState x:Name="Normal" />
-                        <VisualState x:Name="Selected">
-                            <VisualState.Setters>
-                                <Setter Property="BackgroundColor"
-                                        Value="LightSkyBlue" />
-                            </VisualState.Setters>
-                        </VisualState>
-                    </VisualStateGroup>
-                </VisualStateGroupList>
-            </Setter>
-        </Style>
-    </ContentPage.Resources>
-    <RefreshView x:DataType="local:KsiazkaViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
-        <CollectionView x:Name="ItemsListView"
-                ItemsSource="{Binding Items}"
-                SelectionMode="Single"
-                SelectedItems="{Binding SelectedItem}">
-            <CollectionView.ItemTemplate >
-                <DataTemplate>
-                    <Grid>
-                    <StackLayout Padding="10" x:DataType="model:Ksiazki" >
-                        <Label Text="{Binding Tytul}" 
-                            LineBreakMode="NoWrap" 
-                            Style="{DynamicResource ListItemTextStyle}" 
-                            FontSize="16" />
-                        <Label Text="{Binding LiczbaEgzDostepnych}" 
-                            LineBreakMode="NoWrap"
-                            Style="{DynamicResource ListItemDetailTextStyle}"
-                            FontSize="13" />
-                        <Label Text="{Binding NazwaGatunku}" 
-                            LineBreakMode="NoWrap"
-                            Style="{DynamicResource ListItemDetailTextStyle}"
-                            FontSize="13" />
-                        <Label Text="{Binding Autorzy}" 
-                            LineBreakMode="NoWrap"
-                            Style="{DynamicResource ListItemDetailTextStyle}"
-                            FontSize="13" />
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer 
-                                NumberOfTapsRequired="1"
-                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:KsiazkaViewModel}}, Path=ItemTapped}"		
-                                CommandParameter="{Binding .}">
-                            </TapGestureRecognizer>
-                        </StackLayout.GestureRecognizers>
-                    </StackLayout>
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </RefreshView>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout Spacing="3" Padding="15" Grid.Column="0">
+                <Label Text="Sortowanie" Margin="2"/>
+                <Picker     ItemsSource="{Binding  SortComboboxItems}" 
+                            SelectedItem="{Binding SortField}"
+                            />
+                <Button Text="Sortuj" Command="{Binding SortCommand}"/>
+            </StackLayout>
+            <StackLayout Spacing="3" Padding="15" Grid.Column="1">
+                <Label Text="Filtrowanie" Margin="2"/>
+                <Editor Text="{Binding FiltrField, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+                <Button Text="Filtruj" Command="{Binding FiltrCommand}"/>
+            </StackLayout>
+        </Grid>
+        <RefreshView x:DataType="local:KsiazkaViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}" Grid.Row="1">
+            <CollectionView x:Name="ItemsListView"
+                    ItemsSource="{Binding Items}"
+                    SelectionMode="Single"
+                    SelectedItems="{Binding SelectedItem}">
+                <CollectionView.ItemTemplate >
+                    <DataTemplate>
+                        <Grid>
+                        <StackLayout Padding="10" x:DataType="model:Ksiazki" >
+                            <Label Text="{Binding Tytul}" 
+                                LineBreakMode="NoWrap" 
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16" />
+                            <Label Text="{Binding LiczbaEgzDostepnych}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                            <Label Text="{Binding NazwaGatunku}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                            <Label Text="{Binding Autorzy}" 
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                    NumberOfTapsRequired="1"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type local:KsiazkaViewModel}}, Path=ItemTapped}"		
+                                    CommandParameter="{Binding .}">
+                                </TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+    </Grid>
 </ContentPage>

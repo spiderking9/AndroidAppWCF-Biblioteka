@@ -47,8 +47,8 @@ namespace BibliotekaApp.ViewModels.Lista
         public override void Filtr()
         {
             Items = new ObservableCollection<Egzemplarze>(Items.Where(item => 
-                item.KsiazkaTytul.Contains(FiltrField)|| 
-                item.PracownikNazwisko.Contains(FiltrField) ||
+                item.KsiazkaTytul.ToLower().Contains(FiltrField.ToLower())|| 
+                item.PracownikNazwisko.ToLower().Contains(FiltrField.ToLower()) ||
                 item.RokWydania.ToString().Contains(FiltrField)));
         }
     }
