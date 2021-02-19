@@ -13,12 +13,62 @@ namespace BibliotekaApp.ViewModels.Lista
     {
         public IDataStore<T> DataStore => DependencyService.Get<IDataStore<T>>();
         private T _selectedItem;
-        public ObservableCollection<T> Items { get; set; }
+        private ObservableCollection<T> _Items;
+        public ObservableCollection<T> Items 
+        {
+            get
+            {
+                return _Items;
+            }
+            set
+            {
+                if (_Items != value)
+                {
+                    _Items = value;
+                    OnPropertyChanged("Items");
+                }
+            }
+        }
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
         public Command<T> ItemTapped { get; }
 
+        #region Sort
+        public string SortField { get; set; }
+
+        public List<string> SortComboboxItems
+        {
+            get
+            {
+                return GetComboboxSortList();
+            }
+        }
+
         public Command SortCommand { get; }
+
+        public virtual List<string> GetComboboxSortList() { return new List<string>(); }
+
+        public virtual void Sort() { }
+
+        public async void OnSortItem()
+        {
+            Sort();
+        }
+        #endregion Sort
+
+        #region Filtr
+        public string FiltrField { get; set; }
+
+        public Command FiltrCommand { get; }
+
+        public virtual void Filtr() { }
+
+        public async void OnFiltrItem()
+        {
+            Filtr();
+        }
+
+        #endregion Filtr
         public AItemsViewModel()
         {
             Items = new ObservableCollection<T>();
@@ -26,6 +76,7 @@ namespace BibliotekaApp.ViewModels.Lista
             ItemTapped = new Command<T>(OnItemSelected);
             AddItemCommand = new Command(OnAddItem);
             SortCommand = new Command(OnSortItem);
+            FiltrCommand = new Command(OnFiltrItem);
         }
 
 
@@ -86,12 +137,6 @@ namespace BibliotekaApp.ViewModels.Lista
 
 
 
-        public string FindText { get; set; }
-        public virtual void Sort() { }
 
-        private async void OnSortItem()
-        {
-            Sort();
-        }
     }
 }

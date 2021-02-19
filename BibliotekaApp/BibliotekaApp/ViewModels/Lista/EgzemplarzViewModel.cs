@@ -26,10 +26,30 @@ namespace BibliotekaApp.ViewModels.Lista
         {
             await Shell.Current.GoToAsync($"{nameof(EgzemplarzDetailPage)}?{nameof(EgzemplarzDetailViewModel.IdEgzemplarza)}={item.IdEgzemplarza}");
         }
+        public override List<string> GetComboboxSortList()
+        {
+            return new List<string> { "Tytul Ksiazka ASC", "Tytul Ksiazka DSC" , "Pracownik DSC" , "Pracownik ASC" };
+
+        }
 
         public override void Sort()
         {
-            Items = new ObservableCollection<Egzemplarze>(Items.Where(item => item.KsiazkaTytul != null && item.KsiazkaTytul.Contains(FindText)));
+            if (SortField == "Tytul Ksiazka DSC")
+                Items = new ObservableCollection<Egzemplarze>(Items.OrderByDescending(item => item.KsiazkaTytul));
+            if (SortField == "Tytul Ksiazka ASC")
+                Items = new ObservableCollection<Egzemplarze>(Items.OrderBy(item => item.KsiazkaTytul));
+            if (SortField == "Pracownik DSC")
+                Items = new ObservableCollection<Egzemplarze>(Items.OrderByDescending(item => item.PracownikNazwisko));
+            if (SortField == "Pracownik ASC")
+                Items = new ObservableCollection<Egzemplarze>(Items.OrderBy(item => item.PracownikNazwisko));
+        }
+
+        public override void Filtr()
+        {
+            Items = new ObservableCollection<Egzemplarze>(Items.Where(item => 
+                item.KsiazkaTytul.Contains(FiltrField)|| 
+                item.PracownikNazwisko.Contains(FiltrField) ||
+                item.RokWydania.ToString().Contains(FiltrField)));
         }
     }
 }
